@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <!--Iconos super prime-->
+    <script src="https://kit.fontawesome.com/edc6a50afa.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!--Empieza el Navbar, no mover de lugar-->
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #000000;">
+        <div class="container-fluid">
+
+            <!--Nombre del equipo-->
+            <a class="navbar-brand" href="./index.html">
+                <h1>LOS TELEKIRKIES</h1>
+            </a>
+
+            <!--botones-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                <!--lista de los botones-->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ejercicios.html">Ejercicios</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Datos curiosos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./datosCuriosos.html">Dato curioso 1</a></li>
+                            <li><a class="dropdown-item" href="./datosCuriosos2.html">Dato curioso 2</a></li>
+                            <li><a class="dropdown-item" href="./datosCuriosos3.html">Dato curioso 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="redes-sociales">
+                    <a href="https://www.facebook.com/share/19FYYNyHim/" class="red-social facebook" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/numerica.exe?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" class="red-social instagram" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="red-social youtube" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+    </nav>
+
+    <br>
+    <br>
+
+    <!--Carrusel de cards-->
+    <div class="carousel carousel-1">
+    <div class="group group-1">
+        <div class="card card-1">
+            <img src="./imagenes/Mateo.jpg" alt="Mateo">
+        </div>
+        <div class="card card-1">
+            <img src="#" alt="Joan">
+        </div>
+        <div class="card card-1">
+            <img src="./imagenes/Val.jpeg" alt="Valeria">
+        </div>
+        <div class="card card-1">
+            <img src="#" alt="Allison">
+        </div>
+        <div class="card card-1">
+            <img src="#" alt="David">
+        </div>
+        <div class="card card-1">
+            <img src="#" alt="Saul">
+        </div>
+        <div class="card card-1">
+            <img src="#" alt="Hayat">
+        </div>
+    </div>
+
+    <!-- Segunda copia para que el carrusel sea infinito -->
+    <div aria-hidden="true" class="group group-1">
+        <div class="card card-1">
+            <img src="./imagenes/Mateo.jpg" alt="">
+        </div>
+        <div class="card card-1">
+            <img src="#" alt="">
+        </div>
+        <div class="card card-1">
+            <img src="./imagenes/Val.jpeg" alt="">
+        </div>
+        <div class="card card-1">
+            <img src="#" alt="">
+        </div>
+        <div class="card card-1">
+            <img src="#" alt="">
+        </div>
+        <div class="card card-1">
+            <img src="#" alt="">
+        </div>
+        <div class="card card-1">
+            <img src="#" alt="">
+        </div>
+    </div>
+</div>
+
+    <br>
+    <br>
+
+    <!--Información proporcionada en clases para el apartado inicio (Cards)-->
+
+    <div class="container container-2">
+        <div class="card card-2">
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>Esta pagina se centra especificamente para ver lo que se ha hecho a travez del semestre en
+                        Metodos Numericos,
+                        veremos los ejercicios, datos curiosos e información que se proporcionara a lo largo de las
+                        clases.
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card card-2">
+                    <div class="card-body">
+                        <h5 class="card-title">1° ERRORES ILEGITIMOS</h5>
+                        <p class="card-text">Estos errores solo pueden ocurrir por el ser humano.</p>
+                        <a href="#" class="btn btn-primary">Ejemplo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card card-2">
+                    <div class="card-body">
+                        <h5 class="card-title">2° ERRORES DE REDONDEO</h5>
+                        <p class="card-text">Son los errores donde definimos un número finito para obtener una
+                            aproximación.</p>
+                        <a href="#" class="btn btn-primary">Ejemplo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <!--Inicia el carrusel-->
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+
+                <!--Imagen 1-->
+                <img src="./imagenes/metodo_biseccion.png" class="d-block w-50 mx-auto" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+
+                <!--Imagen 2-->
+                <img src="./imagenes/imagen1.jpg" class="d-block w-50 mx-auto" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+
+                <!--Imagen 3-->
+                <img src="./imagenes/imagen2.jpg" class="d-block w-40 mx-auto" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <!--Aqui footer-->
+
+    <footer>
+        <div class="container container-1">
+            <div class="row row-1">
+                <div class="col">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a class="a-1" href="./index.html">Inicio</a></li>
+                        <li><a class="a-1" href="./ejercicios.html">Ejercicios</a></li>
+                        <li><a class="a-1" href="#">Redes Sociales</a></li>
+                        <li><a class="a-1" href="./datosCuriosos.html">Datos Curiosos</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Contacto</h3>
+                    <p>Dirección: UNAM FES ARAGÓN.</p>
+                    <p>Carrera: Ingenieria en Computación</p>
+                    <p>Correo electronico: skibidi67@gmail.com</p>
+                </div>
+                <div class="col">
+                    <h3>Participantes del equipo</h3>
+                    <p>Aguilera Villavicencio Hayat</p>
+                    <p>Cervantes Márquez Joan Antonio</p>
+                    <p>Casarrubias Peñaloza Valeria Guadalupe</p>
+                    <p>Espinosa Rojas Jonatan Mateo</p>
+                    <p>Garduño Muñoa Allison Daniela</p>
+                    <p>Luque Mendoza David</p>
+                    <p>Zamora Tierrablanca Saúl Isai</p>
+                </div>
+
+                <!--Redes sociales-->
+
+                <div class="redes-sociales">
+                    <a href="https://www.facebook.com/share/19FYYNyHim/" class="red-social facebook" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/numerica.exe?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" class="red-social instagram" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="red-social youtube" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--js para la funcion de la pagina-->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

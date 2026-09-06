@@ -1,0 +1,619 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*color de fondo - pagina web*/
+body {
+    font-family: "Poppins", sans-serif;
+    background: #000000;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Footer - NO TOCAR*/
+footer{
+    background-color: #00ff881e;
+    color:#00ff88;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container-1{
+    width: 90%;
+}
+
+.row-1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+ul li{
+    margin-bottom: 10px;
+}
+
+.a-1{
+    color: #dbffdd;
+    text-decoration: none;
+}
+
+.a-1:hover{
+    color: #00ff88 !important;
+}
+
+/* Contenedor de redes */
+.redes-sociales {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Botones de redes sociales */
+.red-social {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    color: white !important;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: transform 0.4s ease;
+}
+
+/* Tamaño del icono */
+.red-social i {
+    font-size: 20px;
+}
+
+/* Facebook */
+.facebook {
+    background-color: blue;
+    box-shadow: 0 0 30px rgba(0, 100, 255, 0.7);
+}
+
+/* Instagram */
+.instagram {
+    background-color: #ff0080;
+    box-shadow: 0 0 30px rgba(238, 130, 238, 0.7);
+}
+
+/* YouTube */
+.youtube {
+    background-color: red;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
+}
+
+/* Hover */
+.red-social:hover {
+    transform: scale(1.15);
+    color: white !important;
+}
+
+/*
+LO QUE SIGUE ES DEL NAVBAR
+NO MOVER MUCHO A MENOS QUE SEA NECESARIO
+SIEMPRE COMENTAR QUE HACE CADA COSA
+PARA NO PERDER LA DOCUMENTACION :)
+*/
+
+
+/*el color del equipo*/
+h1{
+    color:#00ff88;
+}
+
+/*padding del nav*/
+nav {
+    padding: 1rem 5%;
+}
+
+/*los cambios del navbar*/
+.navbar{
+    border: 3px solid;
+    border-radius: 15px;
+    border-color: #00ff88;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 0 10px 15px rgba(0, 151, 50, 0.3);
+}
+
+/* color de los botones del navbar */
+.navbar .nav-link {
+    color: white !important;
+}
+
+/* color cuando pasas el mouse */
+.navbar .nav-link:hover {
+    color: #00ff88 !important;
+}
+
+/* color del botón activo */
+.navbar .nav-link.active {
+    color: #00ff88 !important;
+}
+
+/* color de los elementos del menú desplegable */
+.navbar .dropdown-item {
+    color: black;
+}
+
+/* color al pasar el mouse en el menú desplegable */
+.navbar .dropdown-item:hover {
+    color: white;
+    background-color: #00ff88;
+}
+
+/*menu hamburguesa*/
+.navbar-toggler {
+    border: 2px solid #00ff88;
+}
+
+/*igual menu hamburguesa pero este es el icono
+DATO: no mover la url que contiene la imagen de las lineas del menu
+*/
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%2300ff88' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/*lista desplegable del boton datos curiosos*/
+.dropdown-menu {
+    background-color: #000 !important;
+}
+
+/* Texto blanco de datos curiosos*/
+.dropdown-item {
+    color: #fff !important;
+}
+
+/* Cuando pasas el mouse datos curiosos */
+.dropdown-item:hover {
+    background-color: #00ff9d !important;
+    color: #fff !important;
+}
+
+/*
+LO QUE SIGUE ES DEL carrusel
+NO MOVER MUCHO A MENOS QUE SEA NECESARIO
+SIEMPRE COMENTAR QUE HACE CADA COSA
+PARA NO PERDER LA DOCUMENTACION :)
+*/
+
+/*carrusel 1*/
+.carousel-1{
+    margin: 100px auto;
+    width: 90%;
+    display: flex;
+    overflow-x: auto;
+}
+
+
+.carousel-1::-webkit-scrollbar{
+    display: none;
+}
+
+.group-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 15s infinite linear;
+    padding-right: 1em;
+}
+
+/*card del carrusel 1*/
+.card-1 {
+    flex: 0 0 200px;
+    width: 200px;
+    height: 200px;
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    background: #00ff88;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-1 img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/*animación del carrusel - no mover*/
+@keyframes spin{
+    from{translate: 0;}
+    to{translate: -100%;}
+}
+
+/*
+LO QUE SIGUE ES DEL TEXTO
+NO MOVER MUCHO A MENOS QUE SEA NECESARIO
+SIEMPRE COMENTAR QUE HACE CADA COSA
+PARA NO PERDER LA DOCUMENTACION :)
+*/
+
+p{
+    color: #dbffdd;
+    font-size: 18px;
+}
+
+/*fluoresente*/
+.neon-cyan{
+    color: #fff;
+    font-family: sans-serif;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+/*fluoresente*/
+.neon-morado{
+    color: #fff;
+    font-family: sans-serif;
+    text-shadow: 0 0 5px #6f00ff, 0 0 10px #6f00ff, 0 0 20px #6f00ff, 0 0 40px #6f00ff;
+
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+/*fluoresente*/
+.neon-dorado{
+    color: #fff;
+    font-family: sans-serif;
+    text-shadow: 0 0 5px #a6ff00, 0 0 10px #a6ff00, 0 0 20px #a6ff00, 0 0 40px #a6ff00;
+
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+/*fluoresente*/
+.neon-rojo{
+    color: #fff;
+    font-family: sans-serif;
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000;
+
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+LO QUE SIGUE ES DEL Card
+NO MOVER MUCHO A MENOS QUE SEA NECESARIO
+SIEMPRE COMENTAR QUE HACE CADA COSA
+PARA NO PERDER LA DOCUMENTACION :)
+*/
+
+.card-2 {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 14px 24px 16px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: justify;
+    transition: transform 200ms, background 200ms;
+    background: transparent;
+    color: #00ff88;
+    box-shadow: 0 0 0 3px #00ff88 inset;
+}
+
+.card-2:hover {
+    transform: translateY(-2px);
+}
+
+.card-3 {
+    display: inline-block;
+    outline: 0;
+    margin: 10px;
+    border: 0;
+    border-radius: 8px;
+    padding: 14px 24px 16px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: justify;
+    background: transparent;
+    color: #00ff88;
+    box-shadow: 0 0 0 3px #00ff88 inset;
+}
+
+
+/*Calculadora apartir de aqui ------------ NO TOCAAAAR*/
+
+.calculadora {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #111;
+    border: 2px solid #00ff88;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.25);
+    color: white;
+    box-sizing: border-box;
+}
+
+.calculadora h2 {
+    text-align: center;
+    color: #00ff88;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* esto es del formulario */
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.campo label {
+    color: #00ff88;
+    font-weight: bold;
+}
+
+.campo input {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.campo input:focus {
+    border-color: #00ff88;
+    box-shadow: 0 0 8px rgba(0, 255, 136, 0.3);
+}
+
+/* el boton del formulario xd */
+
+.formulario button {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #00ff88;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.formulario button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+}
+
+/* resultados */
+
+.resultado {
+    display: none;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #181818;
+    border: 1px solid #00ff88;
+    box-sizing: border-box;
+}
+
+.resultado h3 {
+    color: #00ff88;
+    margin-bottom: 15px;
+}
+
+/* aqui es para hacer unicamente la tabla responsiva NADA MAS LA TABLA */
+
+.tabla-container {
+    width: 100%;
+    margin-top: 30px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#tablaBiseccion {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    background: #181818;
+}
+
+#tablaBiseccion th {
+    background: #00ff88;
+    color: black;
+    padding: 12px;
+    white-space: nowrap;
+}
+
+#tablaBiseccion td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    color: white;
+    white-space: nowrap;
+}
+
+#tablaBiseccion tr:hover {
+    background: #222;
+}
+
+/* msj */
+
+#mensaje {
+    margin-top: 20px;
+    color: #ff5555;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+/* formato para tablet - betatester_Joan*/
+
+@media (max-width: 768px) {
+    .calculadora {
+        width: 94%;
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario button {
+        grid-column: auto;
+    }
+
+    .calculadora h2 {
+        font-size: 24px;
+    }
+
+    .descripcion {
+        font-size: 14px;
+    }
+}
+
+/* pa los celulares - Betatester_Todo el equipo*/
+
+@media (max-width: 480px) {
+    .calculadora {
+        width: 95%;
+        margin: 20px auto;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .calculadora h2 {
+        font-size: 21px;
+    }
+
+    .descripcion {
+        font-size: 13px;
+    }
+
+    .campo input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .formulario {
+        gap: 15px;
+    }
+
+    .resultado {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    #tablaBiseccion th,
+    #tablaBiseccion td {
+        padding: 8px;
+        font-size: 13px;
+    }
+}
+
+/* Botones de funciones */
+
+.botones-funciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.botones-funciones button {
+    padding: 8px 14px;
+    border: 1px solid #00ff88;
+    border-radius: 6px;
+    background: #181818;
+    color: #00ff88;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.botones-funciones button:hover {
+    background: #00ff88;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+/* Funcion */
+
+.funcion-campo {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.funcion-campo input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* responsivo */
+@media (max-width: 768px) {
+    .botones-funciones {
+        gap: 6px;
+    }
+
+    .botones-funciones button {
+        flex: 1 1 auto;
+        min-width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .botones-funciones button {
+        font-size: 12px;
+        padding: 7px 10px;
+    }
+}
