@@ -1,0 +1,2291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicios</title>
+
+    <!--Iconos super prime-->
+    <script src="https://kit.fontawesome.com/edc6a50afa.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!--Empieza el Navbar, no mover de lugar-->
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #000000;">
+        <div class="container-fluid">
+
+            <!--Nombre del equipo-->
+            <a class="navbar-brand" href="./index.html">
+            <img src="./imagenes/Los_Telekirkies.png" alt="Los Telekirkies" width="200" height="70">
+            </a>
+
+            <!--botones-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                <!--lista de los botones-->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ejercicios.html">Ejercicios</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Datos curiosos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./datosCuriosos.html">Dato curioso 1</a></li>
+                            <li><a class="dropdown-item" href="./datosCuriosos2.html">Dato curioso 2</a></li>
+                            <li><a class="dropdown-item" href="./datosCuriosos3.html">Dato curioso 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="redes-sociales">
+                    <a href="https://www.facebook.com/share/19FYYNyHim/" class="red-social facebook" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/numerica.exe?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" class="red-social instagram" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="red-social youtube" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+    </nav>
+
+    <br>
+    <br>
+
+    <!--Inica los ejercicios, NOTA: Poner separados simbolos, parentesis, etc. Para que se vea visualmente mejor en la pagina porfas-->
+
+    <div class="container-fluid">
+
+        <!-- Ejercicio 1 -->
+
+        <div class="card card-3">
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p> EJERCICIO #1 </p>
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="card card-3">
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>
+                        Tenemos F(x) = x² - x - 1 encontrar la raiz en el intervalo [ 0,2 ]
+                        para n = 5 y un error de 8%
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <!-- CONTENEDOR DE LAS CARDS -->
+
+        <div class="row">
+
+            <!-- CARD IZQUIERDA - ITERACIÓN 1 -->
+
+            <div class="col-md-6">
+                <div class="card card-3">
+                    <div class="card-header">
+                        Iteración 1
+                    </div>
+
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>
+                                Primero tendremos que evaluar las funciones de inicio y final
+                                (referencia a los intervalos [ 0,2 ])
+                            </p>
+                            <br>
+                            <p>EVALUAMOS:</p>
+                            <p class="neon-cyan">
+                                f ( Xi ) = f ( 0 ) = ( 0² ) - 0 - 1 = - 1
+                                <br>
+                                <br>
+                                f ( Xf ) = f ( 2 ) = ( 2² ) - 2 - 1 = 1
+                            </p>
+                            <br>
+                            <p>
+                                Despues de evaluar los intervalos, tendremos que calcular Xm
+                                <br>
+                                <br>
+                                CALCULAMOS Xm:
+                            </p>
+
+                            <p class="neon-morado">
+                                Xm = 2 + 0 / 2 = 1
+                            </p>
+                            <br>
+                            <p>
+                                Ahora que tenemos Xm vamos a redefinir los intervalos
+                                para la nueva iteración
+                                <br>
+                                <br>
+                                REDEFINIMOS INTERVALOS:
+                            </p>
+
+                            <p class="neon-dorado">
+                                f ( Xm ) = f ( 1 ) = ( 1 )² - 1 - 1 = - 1
+                                <br>
+                                <br>
+                                f ( Xi ) = f ( 0 ) = ( 0² ) - 0 - 1 = - 1
+                            </p>
+                            <br>
+                            <p>
+                                Una vez teniendo redefinidos los nuevos intervalos se van
+                                a multiplicar ambos resultados
+                                <br>
+                                para saber en la dirección que va, recordando que Xm = Xi
+                                si el resultado es positivo
+                                y Xm = Xf si es negativo:
+                            </p>
+
+                            <p class="neon-dorado">
+                                - 1 * - 1 = 1
+                            </p>
+                            <br>
+                            <p>
+                                Como el resultado salio positivo podemos decir que Xm va a
+                                ser Xi en el nuevo intervalo.
+                                <br>
+                                <br>
+                                Dato: Como es la primera iteración normalmente el error que
+                                calculemos nos dara el 100%
+                                <br>
+                                asi que el error se puede calcular desde la 2da iteración
+                            </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD DERECHA -->
+
+            <div class="col-md-6">
+                <div class="card card-3">
+                    <div class="card-header">
+                        Iteración 2
+                    </div>
+
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>
+                                Despues de hacer la primera iteración, se tendra que volver hacer casi el mismo <br>
+                                procedimiento para las demas iteraciones hasta llegar al error minimo deseado.
+                            </p>
+                            <br>
+                            <p>NUEVO INTERVALO:</p>
+                            <p class="neon-cyan">
+                                [ 1,2 ]
+                            </p>
+                            <br>
+                            <p>
+                                Despues se tendra que calcular nuevamente Xm con los nuevos intervalos
+                                <br>
+                                <br>
+                                CALCULAMOS Xm:
+                            </p>
+
+                            <p class="neon-morado">
+                                Xm = 2 + 1 / 2 = 1.5
+                            </p>
+                            <br>
+                            <p>
+                                Ahora que tenemos Xm nuevamente vamos a redefinir los intervalos una vez más
+                                para la nueva iteración
+                                <br>
+                                <br>
+                                REDEFINIMOS INTERVALOS:
+                            </p>
+
+                            <p class="neon-dorado">
+                                f ( Xm ) = f ( 1.5 ) = ( 1.5 )² - 1.5 - 1 = - 0.25
+                                <br>
+                                <br>
+                                f ( Xi ) = f ( 1 ) = ( 1² ) - 1 - 1 = - 1
+                            </p>
+                            <br>
+                            <p>
+                                Siguiendo los pasos de la iteración 1, tendremos que multiplicar el resultado
+                                para saber en la dirección que va nuevamente y ver los intervalos nuevos:
+                            </p>
+
+                            <p class="neon-dorado">
+                                - 0.25 * - 1 = 0.25
+                            </p>
+                            <br>
+                            <p>
+                                Como el resultado salio positivo nuevamente, Xm va a
+                                ser Xi en el nuevo intervalo.
+                                <br>
+                                <br>
+                                Ahora bien, se va hacer un paso más para esta iteración ya que necesitamos saber
+                                el porcentaje de error que se obtuvo en esta iteración y si se encuentra la raiz en esta
+                                iteración
+
+                                <br>
+                                <br>
+                                ERROR:
+                            </p>
+                            <p class="neon-rojo"> | 1.5 - 1 / 1.5 | * 100 = 33.3%</p>
+                            <br>
+                            <p>no es equivalente o menor al 8% de error que buscamos.</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD ABAJO A LA IZQUIERDA -->
+
+            <div class="col-md-6">
+                <div class="card card-3">
+                    <div class="card-header">
+                        Iteración 3
+                    </div>
+
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>
+                                Siguiendo con las iteraciones, nuevamente tendremos un intervalo nuevo
+                            </p>
+                            <br>
+                            <p>NUEVO INTERVALO:</p>
+                            <p class="neon-cyan">
+                                [ 1.5,2 ]
+                            </p>
+                            <br>
+                            <p>
+                                Tendremos que calcular nuevamente Xm
+                                <br>
+                                <br>
+                                CALCULAMOS Xm:
+                            </p>
+
+                            <p class="neon-morado">
+                                Xm = 2 + 1.5 / 2 = 1.75
+                            </p>
+                            <br>
+
+                            <p>Una vez que tengamos Xm se podria calcular el porcentaje de error para ver si proseguir
+                                con las iteraciones y ya no redefinir los intervalos (en este caso nos dan las
+                                iteraciones
+                                que debemos tener, sin embargo se puede usar cuando no te dan la cantidad de intervalos
+                                para usar)
+
+                                <br>
+                                <br>
+                                ERROR:
+                            </p>
+                            <p class="neon-rojo"> | 1.75 - 1.5 / 1.75 | * 100 = 14.29%</p>
+                            <br>
+                            <p>no es equivalente o menor al 8% de error que buscamos, entonces seguiremos con el paso
+                                de redefinición de intervalos para la nueva iteración</p>
+                            <p>
+                                REDEFINIMOS INTERVALOS:
+                            </p>
+
+                            <p class="neon-dorado">
+                                f ( Xm ) = f ( 1.75 ) = ( 1.75 )² - 1.75 - 1 = 0.3
+                                <br>
+                                <br>
+                                f ( Xi ) = f ( 1.5 ) = ( 1.5² ) - 1.5 - 1 = - 1
+                            </p>
+                            <br>
+                            <p>
+                                Una vez teniendo redefinidos los nuevos intervalos se van
+                                a multiplicar ambos resultados
+                                <br>
+                                para saber en la dirección que va nuevamente
+                            </p>
+
+                            <p class="neon-dorado">
+                                0.3 * - 1 = - 0.3
+                            </p>
+                            <br>
+                            <p>
+                                Como el resultado salio negativo esta vez, podemos decir que Xm va a
+                                ser Xf en el nuevo intervalo.
+                            </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD DERECHA ABAJO-->
+
+            <div class="col-md-6">
+                <div class="card card-3">
+                    <div class="card-header">
+                        Iteración 4
+                    </div>
+
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>
+                                Despues de hacer la tercera iteración, se tendra que volver hacer casi el mismo <br>
+                                procedimiento para las demas iteraciones hasta llegar al error minimo deseado.
+                            </p>
+                            <br>
+                            <p>NUEVO INTERVALO:</p>
+                            <p class="neon-cyan">
+                                [ 1.5,1.75 ]
+                            </p>
+                            <br>
+                            <p>
+                                Despues se tendra que calcular nuevamente Xm con los nuevos intervalos
+                                <br>
+                                <br>
+                                CALCULAMOS Xm:
+                            </p>
+
+                            <p class="neon-morado">
+                                Xm = 1.75 + 1.5 / 2 = 1.63
+                            </p>
+                            <br>
+                            <p>
+                                Ahora que tenemos Xm nuevamente vamos a redefinir los intervalos una vez más
+                                para la nueva iteración
+                                <br>
+                                <br>
+                                REDEFINIMOS INTERVALOS:
+                            </p>
+
+                            <p class="neon-dorado">
+                                f ( Xm ) = f ( 1.63 ) = ( 1.63 )² - 1.63 - 1 = 0.0269
+                                <br>
+                                <br>
+                                f ( Xi ) = f ( 1.75 ) = ( 1.75² ) - 1.75 - 1 = 0.3125
+                            </p>
+                            <br>
+                            <p>
+                                Siguiendo los pasos de las demas iteraciones, tendremos que multiplicar el resultado
+                                para saber en la dirección que va nuevamente y ver los intervalos nuevos:
+                            </p>
+
+                            <p class="neon-dorado">
+                                0.0269 * 0.3125 = 0.00840625
+                            </p>
+                            <br>
+                            <p>
+                                Como el resultado salio positivo, Xm va a
+                                ser Xi en el nuevo intervalo.
+                                <br>
+                                <br>
+                                Se va a calcular el porcentaje de error que se obtuvo en esta iteración y si se
+                                encuentra la raiz en esta iteración
+                                <br>
+                                <br>
+                                ERROR:
+                            </p>
+                            <p class="neon-rojo"> | 1.63 - 1.5 / 1.63 | * 100 = 7.98%</p>
+                            <br>
+                            <p>Es equivalente o menor al 8% de error que buscamos, asi que nos quedaremos
+                                con este valor para este problema.</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+
+        <!-- Ejercicio 2 -->
+
+        <div class="card card-3">
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p> EJERCICIO #2 </p>
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="card card-3">
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>
+                        Tenemos F(x) = x³ - x² - 1 encontrar la raiz en el intervalo [ 1,2 ]
+                        con una tolerancia de 1/16 = 0.06
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <!-- CONTENEDOR DE LAS CARDS -->
+
+        <div class="row">
+
+            <!-- CARD IZQUIERDA - ITERACIÓN 1 -->
+
+            <div class="col-md-6">
+                <div class="card card-3">
+                    <div class="card-header">
+                        Iteración 1
+                    </div>
+
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>
+                                Primero tendremos que evaluar las funciones de inicio y final
+                                (referencia a los intervalos [ 1,2 ])
+                            </p>
+                            <br>
+                            <p>EVALUAMOS:</p>
+                            <p class="neon-cyan">
+                                f ( Xi ) = f ( 1 ) = 1³ - 1² - 1 = - 1
+                                <br>
+                                <br>
+                                f ( Xf ) = f ( 2 ) = 2³ - 2² - 1 = 3
+                            </p>
+                            <br>
+                            <p>
+                                Despues de evaluar los intervalos, tendremos que calcular Xm
+                                <br>
+                                <br>
+                                CALCULAMOS Xm:
+                            </p>
+
+                            <p class="neon-morado">
+                                Xm = 2 + 1 / 2 = 1.5
+                            </p>
+                            <br>
+                            <p>
+                                Ahora que tenemos Xm vamos a redefinir los intervalos
+                                para la nueva iteración
+                                <br>
+                                <br>
+                                REDEFINIMOS INTERVALOS:
+                            </p>
+
+                            <p class="neon-dorado">
+                                f ( Xm ) = f ( 1.5 ) = 1.5³ - 1.5² - 1 = 0.125
+                                <br>
+                                <br>
+                                f ( Xi ) = f ( 1 ) = 1³ - 1² - 1 = - 1
+                            </p>
+                            <br>
+                            <p>
+                                Una vez teniendo redefinidos los nuevos intervalos se van
+                                a multiplicar ambos resultados
+                                <br>
+                                para saber en la dirección que va, recordando que Xm = Xi
+                                si el resultado es positivo
+                                y Xm = Xf si es negativo:
+                            </p>
+
+                            <p class="neon-dorado">
+                                0.125 * - 1 = -0.125
+                            </p>
+                            <br>
+                            <p>
+                                Como el resultado salio negativo podemos decir que Xm va a
+                                ser Xf en el nuevo intervalo.
+                                <br>
+                            </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD DERECHA -->
+
+            <div class="col-md-6">
+                <div class="card card-3">
+                    <div class="card-header">
+                        Iteración 2
+                    </div>
+
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>
+                                Despues de hacer la primera iteración, se tendra que volver hacer casi el mismo <br>
+                                procedimiento para las demas iteraciones hasta llegar al error minimo deseado.
+                            </p>
+                            <br>
+                            <p>NUEVO INTERVALO:</p>
+                            <p class="neon-cyan">
+                                [ 1,1.5 ]
+                            </p>
+                            <br>
+                            <p>
+                                Despues se tendra que calcular nuevamente Xm con los nuevos intervalos
+                                <br>
+                                <br>
+                                CALCULAMOS Xm:
+                            </p>
+
+                            <p class="neon-morado">
+                                Xm = 1.5 + 1 / 2 = 1.25
+                            </p>
+                            <br>
+                            <p>
+                                Ahora que tenemos Xm nuevamente vamos a redefinir los intervalos una vez más
+                                para la nueva iteración
+                                <br>
+                                <br>
+                                REDEFINIMOS INTERVALOS:
+                            </p>
+
+                            <p class="neon-dorado">
+                                f ( Xm ) = f ( 1.25 ) = 1.25³ - 1.25² - 1 = - 0.60
+                                <br>
+                                <br>
+                                f ( Xi ) = f ( 1 ) = 1³ - 1² - 1 = - 1
+                            </p>
+                            <br>
+                            <p>
+                                Siguiendo los pasos de la iteración 1, tendremos que multiplicar el resultado
+                                para saber en la dirección que va nuevamente y ver los intervalos nuevos:
+                            </p>
+
+                            <p class="neon-dorado">
+                                - 0.60 * - 1 = 0.60
+                            </p>
+                            <br>
+                            <p>
+                                Como el resultado salio positivo, Xm va a
+                                ser Xi en el nuevo intervalo.
+                                <br>
+                                <br>
+                                Ahora bien, se va hacer un paso más para esta iteración ya que necesitamos saber
+                                el porcentaje de error que se obtuvo en esta iteración y si se encuentra la raiz en esta
+                                iteración
+                                <br>
+                                <br>
+                                ERROR:
+                            </p>
+                            <p class="neon-rojo"> | 1.25 - 1.5 / 1.25 | = | - 0.2 | = 0.2 > 0.06 </p>
+                            <br>
+                            <p>en este caso como estamos trabajando con tolerancia podemos no multiplicarlo por 100
+                                y dejar los decimales para comparar si el valor es mas alto o bajo que la tolerancia,
+                                sin embargo se puede sacar el porcentaje de la tolerancia al multiplicarlo por 100, pero
+                                en este ejercicio ocuparemos la primera opcion.</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD ABAJO A LA IZQUIERDA -->
+
+            <div class="col-md-6">
+                <div class="card card-3">
+                    <div class="card-header">
+                        Iteración 3
+                    </div>
+
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>
+                                Siguiendo con las iteraciones, nuevamente tendremos un intervalo nuevo
+                            </p>
+                            <br>
+                            <p>NUEVO INTERVALO:</p>
+                            <p class="neon-cyan">
+                                [ 1.25,1.5 ]
+                            </p>
+                            <br>
+                            <p>
+                                Tendremos que calcular nuevamente Xm
+                                <br>
+                                <br>
+                                CALCULAMOS Xm:
+                            </p>
+
+                            <p class="neon-morado">
+                                Xm = 1.5 + 1.25 / 2 = 1.375
+                            </p>
+                            <br>
+
+                            <p>Una vez que tengamos Xm se podria calcular la tolerancia de error para ver si proseguir
+                                con las iteraciones y ya no redefinir los intervalos (en este caso no nos dan las
+                                iteraciones que debemos tener)
+                                <br>
+                                <br>
+                                ERROR:
+                            </p>
+                            <p class="neon-rojo"> | 1.375 - 1.25 / 1.375 | = 0.090 > 0.06</p>
+                            <br>
+                            <p>no es equivalente o menor a 0.06 de tolerancia que buscamos, entonces seguiremos con el
+                                paso
+                                de redefinición de intervalos para la nueva iteración</p>
+                            <p>
+                                REDEFINIMOS INTERVALOS:
+                            </p>
+
+                            <p class="neon-dorado">
+                                f ( Xm ) = f ( 1.375 ) = 1.375³ - 1.375² - 1 = - 0.30
+                                <br>
+                                <br>
+                                f ( Xi ) = f ( 1.25 ) = 1.25³ - 1.25² - 1 = - 0.60
+                            </p>
+                            <br>
+                            <p>
+                                Una vez teniendo redefinidos los nuevos intervalos se van
+                                a multiplicar ambos resultados
+                                <br>
+                                para saber en la dirección que va nuevamente
+                            </p>
+
+                            <p class="neon-dorado">
+                                - 0.30 * - 0.60 = 0.18
+                            </p>
+                            <br>
+                            <p>
+                                Como el resultado salio positivo esta vez, podemos decir que Xm va a
+                                ser Xi en el nuevo intervalo.
+                            </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD DERECHA ABAJO-->
+
+            <div class="col-md-6">
+                <div class="card card-3">
+                    <div class="card-header">
+                        Iteración 4
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>
+                                Nuevamente tendremos un intervalo nuevo
+                            </p>
+                            <br>
+                            <p>NUEVO INTERVALO:</p>
+                            <p class="neon-cyan">
+                                [ 1.375,1.5 ]
+                            </p>
+                            <br>
+                            <p>
+                                Tendremos que calcular nuevamente Xm
+                                <br>
+                                <br>
+                                CALCULAMOS Xm:
+                            </p>
+
+                            <p class="neon-morado">
+                                Xm = 1.5 + 1.375 / 2 = 1.43
+                            </p>
+                            <br>
+
+                            <p>Una vez que tengamos Xm se calcula la tolerancia de error
+                                <br>
+                                <br>
+                                ERROR:
+                            </p>
+                            <p class="neon-rojo"> | 1.43 - 1.375 / 1.43 | = 0.041 < 0.06</p>
+                                    <br>
+                                    <p>Es menor a 0.06 de tolerancia que buscamos, entonces las iteraciones se acaban
+                                        aqui
+                                        y no es tan necesario redefinir intervalos para una nueva iteración,
+                                        sin embargo por esta vez vamos a redefinir los intervalos para ver que valores
+                                        nos
+                                        daba
+                                    </p>
+                                    <p>
+                                        REDEFINIMOS INTERVALOS:
+                                    </p>
+
+                                    <p class="neon-dorado">
+                                        f ( Xm ) = f ( 1.43 ) = 1.43³ - 1.43² - 1 = - 0.12
+                                        <br>
+                                        <br>
+                                        f ( Xi ) = f ( 1.375 ) = 1.375³ - 1.357² - 1 = - 0.30
+                                    </p>
+                                    <br>
+                                    <p>
+                                        Una vez teniendo redefinidos los nuevos intervalos se van
+                                        a multiplicar ambos resultados
+                                        <br>
+                                        para saber en la dirección que iban a tomar va nuevamente
+                                    </p>
+
+                                    <p class="neon-dorado">
+                                        - 0.12 * - 0.30 = 0.036
+                                    </p>
+                                    <br>
+                                    <p>
+                                        Como el resultado salio positivo, podemos decir que Xm iba a
+                                        ser Xi en el nuevo intervalo.
+                                    </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ejercicio 3 -->
+
+        <div class="card card-3">
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p> EJERCICIO #3 </p>
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="card card-3">
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>
+                        Tenemos F(x) = x² - 5 encontrar la raiz con una tolerancia de 1/16 = 0.06
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <!-- CONTENEDOR DE LAS CARDS -->
+
+        <div class="row">
+
+            <!-- CARD IZQUIERDA - ITERACIÓN 1 -->
+
+            <div class="col-md-6">
+                <div class="card card-3">
+                    <div class="card-header">
+                        Iteración 1
+                    </div>
+
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>
+                                Primero tendremos que evaluar las funciones de inicio y final, sin embargo
+                                en este caso no nos dan los intervalos para evaluar de primeras, entonces
+                                vamos a tener que hacer el tanteo de un numero que nos de negativo al ponerlo
+                                en la funcion y otro positivo asi sabremos que ese intervalo tendra una raiz
+                                en este ejemplo el intervalo fue [ 2,3 ]
+                            </p>
+                            <br>
+                            <p>EVALUAMOS:</p>
+                            <p class="neon-cyan">
+                                f ( Xi ) = f ( 2 ) = 2² - 5 = - 1
+                                <br>
+                                <br>
+                                f ( Xf ) = f ( 3 ) = 3² - 5 = 4
+                            </p>
+                            <br>
+                            <p>
+                                Despues de evaluar los intervalos, tendremos que calcular Xm
+                                <br>
+                                <br>
+                                CALCULAMOS Xm:
+                            </p>
+
+                            <p class="neon-morado">
+                                Xm = 3 + 2 / 2 = 2.5
+                            </p>
+                            <br>
+                            <p>
+                                Ahora que tenemos Xm vamos a redefinir los intervalos
+                                para la nueva iteración
+                                <br>
+                                <br>
+                                REDEFINIMOS INTERVALOS:
+                            </p>
+
+                            <p class="neon-dorado">
+                                f ( Xm ) = f ( 2.5 ) = 2.5² - 5 = 1.25
+                                <br>
+                                <br>
+                                f ( Xi ) = f ( 2 ) = 2² - 5 = - 1
+                            </p>
+                            <br>
+                            <p>
+                                Una vez teniendo redefinidos los nuevos intervalos se van
+                                a multiplicar ambos resultados para saber en la dirección que va
+                            </p>
+
+                            <p class="neon-dorado">
+                                1.25 * - 1 = - 1.25
+                            </p>
+                            <br>
+                            <p>
+                                Como el resultado salio negativo podemos decir que Xm va a
+                                ser Xf en el nuevo intervalo.
+                                <br>
+                            </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD DERECHA -->
+
+            <div class="col-md-6">
+                <div class="card card-3">
+                    <div class="card-header">
+                        Iteración 2
+                    </div>
+
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>
+                                Despues de hacer la primera iteración, se tendra que volver hacer casi el mismo <br>
+                                procedimiento para las demas iteraciones hasta llegar al error minimo deseado.
+                            </p>
+                            <br>
+                            <p>NUEVO INTERVALO:</p>
+                            <p class="neon-cyan">
+                                [ 2,2.5 ]
+                            </p>
+                            <br>
+                            <p>
+                                Despues se tendra que calcular nuevamente Xm con los nuevos intervalos
+                                <br>
+                                <br>
+                                CALCULAMOS Xm:
+                            </p>
+
+                            <p class="neon-morado">
+                                Xm = 2.5 + 2 / 2 = 2.25
+                            </p>
+                            <br>
+                            <p> Se va a calcular la tolerancia de error que se obtuvo en esta iteración y
+                                si se encuentra la raiz en esta iteración
+                                <br>
+                                <br>
+                                ERROR:
+                            </p>
+                            <p class="neon-rojo"> | 2.25 - 2.5 / 2.25 | = | - 0.111 | = 0.111 > 0.06 </p>
+                            <br>
+                            <p>como es mayor a la tolerancia entonces podemos seguir iterando y
+                                ya que tenemos Xm nuevamente vamos a redefinir los intervalos una vez más
+                                para la nueva iteración
+                                <br>
+                                <br>
+                                REDEFINIMOS INTERVALOS:
+                            </p>
+
+                            <p class="neon-dorado">
+                                f ( Xm ) = f ( 2.25 ) = 2.25² - 5 = 0.062
+                                <br>
+                                <br>
+                                f ( Xi ) = f ( 2 ) = 2² - 5 = - 1
+                            </p>
+                            <br>
+                            <p>
+                                Siguiendo los pasos de la iteración 1, tendremos que multiplicar el resultado
+                                para saber en la dirección que va nuevamente y ver los intervalos nuevos:
+                            </p>
+
+                            <p class="neon-dorado">
+                                0.062 * - 1 = - 0.062
+                            </p>
+                            <br>
+                            <p>
+                                Como el resultado salio negativo, Xm va a ser Xf en el nuevo intervalo.
+                            </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD ABAJO A LA IZQUIERDA -->
+
+            <div class="col-md-6">
+                <div class="card card-3">
+                    <div class="card-header">
+                        Iteración 3
+                    </div>
+
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>
+                                Siguiendo con las iteraciones, nuevamente tendremos un intervalo nuevo
+                            </p>
+                            <br>
+                            <p>NUEVO INTERVALO:</p>
+                            <p class="neon-cyan">
+                                [ 2,2.25 ]
+                            </p>
+                            <br>
+                            <p>
+                                Tendremos que calcular nuevamente Xm
+                                <br>
+                                <br>
+                                CALCULAMOS Xm:
+                            </p>
+
+                            <p class="neon-morado">
+                                Xm = 2.25 + 2 / 2 = 2.125
+                            </p>
+                            <br>
+
+                            <p>Una vez que tengamos Xm se calcula la tolerancia de error para ver si proseguir
+                                con las iteraciones y ya no redefinir los intervalos
+                                <br>
+                                <br>
+                                ERROR:
+                            </p>
+                            <p class="neon-rojo"> | 2.125 - 2.25 / 2.125 | = | - 0.05882 | = 0.05882 < 0.06</p>
+                                    <br>
+                                    <p>Es menor a 0.06 de tolerancia que buscamos, entonces hasta aqui se deja de iterar
+                                    </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ejercicio 4 -->
+
+        <div class="card card-3">
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p> EJERCICIO #4 </p>
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="card card-3">
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>
+                        Tenemos F(x) = Cos(0.5e^-x) + x² - 2 encontrar la raiz en el intervalo [ - 1.9, -1.7 ]
+                        con un maximo de 6 iteraciones
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <!-- CONTENEDOR DE LAS CARDS -->
+
+        <div class="row">
+
+            <!-- CARD IZQUIERDA - ITERACIÓN 1 -->
+
+            <div class="col-md-6">
+                <div class="card card-3">
+                    <div class="card-header">
+                        Iteración 1
+                    </div>
+
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>
+                                Primero tendremos que evaluar las funciones de inicio y final
+                                (referencia a los intervalos [ - 1.9, - 1.7 ])
+                            </p>
+                            <br>
+                            <p>EVALUAMOS:</p>
+                            <p class="neon-cyan">
+                                f ( Xi ) = f ( - 1.9 ) = Cos(0.5e^ - ( - 1.9 )) + ( - 1.9 )² - 2 = 0.63020
+                                <br>
+                                <br>
+                                f ( Xf ) = f ( - 1.7 ) = Cos(0.5e^- ( - 1.7 )) + ( - 1.7 )² - 2 = - 0.02925
+                            </p>
+                            <br>
+                            <p>
+                                Despues de evaluar los intervalos, tendremos que calcular Xm
+                                <br>
+                                <br>
+                                CALCULAMOS Xm:
+                            </p>
+
+                            <p class="neon-morado">
+                                Xm = - 1.7 + ( -1.9 ) / 2 = - 1.8
+                            </p>
+                            <br>
+                            <p>
+                                Ahora que tenemos Xm vamos a redefinir los intervalos
+                                para la nueva iteración
+                                <br>
+                                <br>
+                                REDEFINIMOS INTERVALOS:
+                            </p>
+
+                            <p class="neon-dorado">
+                                f ( Xm ) = f ( - 1.8 ) = Cos(0.5e^- ( - 1.8 )) + ( - 1.8 )² - 2 = 0.2468
+                                <br>
+                                <br>
+                                f ( Xi ) = f ( - 1.9 ) = Cos(0.5e^- ( - 1.9 )) + ( - 1.9 )² - 2 = 0.63020
+                            </p>
+                            <br>
+                            <p>
+                                Una vez teniendo redefinidos los nuevos intervalos se van
+                                a multiplicar ambos resultados para saber en la dirección que va
+                            </p>
+
+                            <p class="neon-dorado">
+                                0.2468 * 0.63020 = 0.15553
+                            </p>
+                            <br>
+                            <p>
+                                Como el resultado salio positivo podemos decir que Xm va a
+                                ser Xi en el nuevo intervalo.
+                                <br>
+                            </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD DERECHA -->
+
+            <div class="col-md-6">
+                <div class="card card-3">
+                    <div class="card-header">
+                        Iteración 2
+                    </div>
+
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>
+                                Despues de hacer la primera iteración, se tendra que volver hacer casi el mismo <br>
+                                procedimiento para las demas iteraciones hasta llegar al error minimo deseado.
+                            </p>
+                            <br>
+                            <p>NUEVO INTERVALO:</p>
+                            <p class="neon-cyan">
+                                [ - 1.8, - 1.7 ]
+                            </p>
+                            <br>
+                            <p>
+                                Despues se tendra que calcular nuevamente Xm con los nuevos intervalos
+                                <br>
+                                <br>
+                                CALCULAMOS Xm:
+                            </p>
+
+                            <p class="neon-morado">
+                                Xm = - 1.7 + ( -1.8 ) / 2 = - 1.75
+                            </p>
+                            <br>
+                            <p>
+                                Ahora que tenemos Xm nuevamente vamos a redefinir los intervalos una vez más
+                                para la nueva iteración
+                                <br>
+                                <br>
+                                REDEFINIMOS INTERVALOS:
+                            </p>
+
+                            <p class="neon-dorado">
+                                f ( Xm ) = f ( - 1.75 ) = Cos(0.5e^- ( - 1.75 )) + ( - 1.75 )² - 2 = 0.09722
+                                <br>
+                                <br>
+                                f ( Xi ) = f ( - 1.8 ) = Cos(0.5e^- ( - 1.8 )) + ( - 1.8 )² - 2 = 0.2468
+                            </p>
+                            <br>
+                            <p>
+                                Siguiendo los pasos de la iteración 1, tendremos que multiplicar el resultado
+                                para saber en la dirección que va nuevamente y ver los intervalos nuevos:
+                            </p>
+
+                            <p class="neon-dorado">
+                                0.09722 * 0.2468 = 0.0239
+                            </p>
+                            <br>
+                            <p>
+                                Como el resultado salio positivo, Xm va a ser Xi en el nuevo intervalo.
+                                <br>
+                                <br>
+                                ERROR:
+                            </p>
+                            <p class="neon-rojo"> | - 1.75 - ( - 1.8 ) / - 1.75 | = | - 0.02857 | = 0.02857 </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD ABAJO A LA IZQUIERDA -->
+
+            <div class="col-md-6">
+                <div class="card card-3">
+                    <div class="card-header">
+                        Iteración 3
+                    </div>
+
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>
+                                Siguiendo con las iteraciones, nuevamente tendremos un intervalo nuevo
+                            </p>
+                            <br>
+                            <p>NUEVO INTERVALO:</p>
+                            <p class="neon-cyan">
+                                [ - 1.75, - 1.7 ]
+                            </p>
+                            <br>
+                            <p>
+                                Tendremos que calcular nuevamente Xm
+                                <br>
+                                <br>
+                                CALCULAMOS Xm:
+                            </p>
+
+                            <p class="neon-morado">
+                                Xm = - 1.7 + ( - 1.75 ) / 2 = - 1.725
+                            </p>
+                            <br>
+
+                            <p>
+                                ERROR:
+                            </p>
+                            <p class="neon-rojo"> | - 1.725 - ( - 1.75 ) / - 1.725 | = | - 0.01449 | = 0.01449</p>
+                            <br>
+                            <p>
+                                REDEFINIMOS INTERVALOS:
+                            </p>
+
+                            <p class="neon-dorado">
+                                f ( Xm ) = f ( - 1.725 ) = Cos(0.5e^- ( - 1.725 )) + ( - 1.725 )² - 2 = - 0.03132
+                                <br>
+                                <br>
+                                f ( Xi ) = f ( - 1.75 ) = Cos(0.5e^- ( - 1.75 )) + ( - 1.75 )² - 2 = 0.09722
+                            </p>
+                            <br>
+                            <p>
+                                Una vez teniendo redefinidos los nuevos intervalos se van
+                                a multiplicar ambos resultados para saber en la dirección que va nuevamente
+                            </p>
+
+                            <p class="neon-dorado">
+                                - 0.03132 * 0.09722 = - 0.003044
+                            </p>
+                            <br>
+                            <p>
+                                Como el resultado salio negativo, podemos decir que Xm va a
+                                ser Xf en el nuevo intervalo.
+                            </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD DERECHA ABAJO-->
+
+            <div class="col-md-6">
+                <div class="card card-3">
+                    <div class="card-header">
+                        Iteración 4
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>
+                                Nuevamente tendremos un intervalo nuevo
+                            </p>
+                            <br>
+                            <p>NUEVO INTERVALO:</p>
+                            <p class="neon-cyan">
+                                [ - 1.725, - 1.7 ]
+                            </p>
+                            <br>
+                            <p>
+                                Tendremos que calcular nuevamente Xm
+                                <br>
+                                <br>
+                                CALCULAMOS Xm:
+                            </p>
+
+                            <p class="neon-morado">
+                                Xm = - 1.7 + ( - 1.725 ) / 2 = - 1.7125
+                            </p>
+                            <br>
+
+                            <p>Una vez que tengamos Xm se calcula la tolerancia de error
+                                <br>
+                                <br>
+                                ERROR:
+                            </p>
+                            <p class="neon-rojo"> | - 1.7125 - ( - 1.725 ) / - 1.7125 | = | - 0.007299 | = 0.007299</p>
+                            <br>
+                            <p>
+                                REDEFINIMOS INTERVALOS:
+                            </p>
+
+                            <p class="neon-dorado">
+                                f ( Xm ) = f ( - 1.7125 ) = Cos(0.5e^- ( - 1.7125 )) + ( - 1.7125 )² - 2 = 0.0003983
+                                <br>
+                                <br>
+                                f ( Xi ) = f ( - 1.725 ) = Cos(0.5e^- ( - 1.725 )) + ( - 1.725 )² - 2 = 0.03132
+                            </p>
+                            <br>
+                            <p>
+                                Una vez teniendo redefinidos los nuevos intervalos se van a multiplicar ambos resultados
+                                para saber en la dirección que iban a tomar va nuevamente
+                            </p>
+                            <p class="neon-dorado">
+                                0.0003983 * 0.03132 = 0.00001247
+                            </p>
+                            <br>
+                            <p>
+                                Como el resultado salio positivo, podemos decir que Xm va a
+                                ser Xi en el nuevo intervalo.
+                            </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- CARD ABAJO A LA IZQUIERDA -->
+
+            <div class="col-md-6">
+                <div class="card card-3">
+                    <div class="card-header">
+                        Iteración 5
+                    </div>
+
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>
+                                Siguiendo con las iteraciones, nuevamente tendremos un intervalo nuevo
+                            </p>
+                            <br>
+                            <p>NUEVO INTERVALO:</p>
+                            <p class="neon-cyan">
+                                [ - 1.7125, - 1.7 ]
+                            </p>
+                            <br>
+                            <p>
+                                Tendremos que calcular nuevamente Xm
+                                <br>
+                                <br>
+                                CALCULAMOS Xm:
+                            </p>
+
+                            <p class="neon-morado">
+                                Xm = - 1.7 + ( - 1.7125 ) / 2 = - 1.7062
+                            </p>
+                            <br>
+
+                            <p>
+                                ERROR:
+                            </p>
+                            <p class="neon-rojo"> | - 1.7062 - ( - 1.7125 ) / - 1.7062 | = | - 0.003692 | = 0.003692</p>
+                            <br>
+                            <p>
+                                REDEFINIMOS INTERVALOS:
+                            </p>
+
+                            <p class="neon-dorado">
+                                f ( Xm ) = f ( - 1.7062 ) = Cos(0.5e^- ( - 1.7062 )) + ( - 1.7062 )² - 2 = - 0.01470
+                                <br>
+                                <br>
+                                f ( Xi ) = f ( - 1.7125 ) = Cos(0.5e^- ( - 1.7125 )) + ( - 1.7125 )² - 2 = 0.0003983
+                            </p>
+                            <br>
+                            <p>
+                                Una vez teniendo redefinidos los nuevos intervalos se van
+                                a multiplicar ambos resultados para saber en la dirección que va nuevamente
+                            </p>
+
+                            <p class="neon-dorado">
+                                - 0.01470 * 0.0003983 = - 0.000005855
+                            </p>
+                            <br>
+                            <p>
+                                Como el resultado salio negativo, podemos decir que Xm va a
+                                ser Xf en el nuevo intervalo.
+                            </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD DERECHA ABAJO-->
+
+            <div class="col-md-6">
+                <div class="card card-3">
+                    <div class="card-header">
+                        Iteración 6
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>
+                                Nuevamente tendremos un intervalo nuevo
+                            </p>
+                            <br>
+                            <p>NUEVO INTERVALO:</p>
+                            <p class="neon-cyan">
+                                [ - 1.725, - 1.7062 ]
+                            </p>
+                            <br>
+                            <p>
+                                Tendremos que calcular nuevamente Xm
+                                <br>
+                                <br>
+                                CALCULAMOS Xm:
+                            </p>
+
+                            <p class="neon-morado">
+                                Xm = - 1.7062 + ( - 1.7125 ) / 2 = - 1.7093
+                            </p>
+                            <br>
+
+                            <p>Una vez que tengamos Xm se calcula la tolerancia de error
+                                <br>
+                                <br>
+                                ERROR:
+                            </p>
+                            <p class="neon-rojo"> | - 1.7093 - ( - 1.7062 ) / - 1.7093 | = 0.001813</p>
+                            <br>
+                            <p>
+                                REDEFINIMOS INTERVALOS:
+                            </p>
+
+                            <p class="neon-dorado">
+                                f ( Xm ) = f ( - 1.7093 ) = Cos(0.5e^- ( - 1.7093 )) + ( - 1.7093 )² - 2 = - 0.007311
+                                <br>
+                                <br>
+                                f ( Xi ) = f ( - 1.7125 ) = Cos(0.5e^- ( - 1.7125 )) + ( - 1.7125 )² - 2 = 0.0003983
+                            </p>
+                            <br>
+                            <p>
+                                Una vez teniendo redefinidos los nuevos intervalos se van a multiplicar ambos resultados
+                                para saber en la dirección que iban a tomar va nuevamente
+                            </p>
+                            <p class="neon-dorado">
+                                - 0.007311 * 0.0003983 = - 0.00000291197
+                            </p>
+                            <br>
+                            <p>
+                                0.001813 es la tolerancia que buscamos si lo ponemos con un maximo de 6 iteraciones
+                            </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<br>
+<br>
+
+    <!-- Ejercicio 5 -->
+<div class="card card-3">
+    <div class="card-body">
+        <blockquote class="blockquote mb-0">
+            <p> EJERCICIO #5 </p>
+        </blockquote>
+    </div>
+</div>
+
+<div class="card card-3">
+    <div class="card-body">
+        <blockquote class="blockquote mb-0">
+            <p>
+                Tenemos F(x) = e³ˣ - 4 encontrar la raiz en el intervalo [ 0,1 ]
+                para un error de &epsilon;<sub>a</sub> &lt; 1% usando el método de bisección.
+            </p>
+        </blockquote>
+    </div>
+</div>
+
+<br>
+<br>
+
+<!-- CONTENEDOR DE LAS CARDS -->
+<div class="row">
+
+    <!-- CARD IZQUIERDA - ITERACIÓN 1 -->
+    <div class="col-md-6">
+        <div class="card card-3">
+            <div class="card-header">
+                Iteración 1
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>
+                        Evaluamos las funciones de inicio y final para determinar el subintervalo donde ocurre el cambio de signo (Teorema de Bolzano).
+                        <br>
+                        (Referencia a los intervalos [ 0,1 ])
+                    </p>
+                    <br>
+                    <p>EVALUAMOS:</p>
+                    <p class="neon-cyan">
+                        f ( Xi ) = f ( 0 ) = e³⁽⁰⁾ - 4 = 1 - 4 = - 3
+                        <br>
+                        <br>
+                        f ( Xf ) = f ( 1 ) = e³⁽¹⁾ - 4 = e³ - 4 &approx; 20.0855 - 4 = 16.0855
+                    </p>
+                    <br>
+                    <p>
+                        Como hay un cambio de signo (de negativo a positivo), calculamos Xm (el punto medio).
+                        <br>
+                        <br>
+                        CALCULAMOS Xm:
+                    </p>
+                    <p class="neon-morado">
+                        Xm = (0 + 1) / 2 = 0.5
+                    </p>
+                    <br>
+                    <p>
+                        Ahora calculamos el error relativo porcentual aproximado. Dado que es la primera iteración, no tenemos un valor previo para compararlo, por lo que el error es indefinido.
+                        <br>
+                        <br>
+                        <span class="neon-rojo">&epsilon;<sub>a</sub> = Indefinido</span>
+                    </p>
+                    <br>
+                    <p>Procedemos a redefinir los intervalos para la siguiente iteración.</p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD DERECHA - ITERACIÓN 2 -->
+    <div class="col-md-6">
+        <div class="card card-3">
+            <div class="card-header">
+                Iteración 2
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>
+                        Verificamos el signo de la nueva evaluación para acotar el intervalo.
+                    </p>
+                    <br>
+                    <p>NUEVO INTERVALO:</p>
+                    <p class="neon-cyan">
+                        [ 0, 0.5 ]
+                    </p>
+                    <br>
+                    <p>
+                        Calculamos nuevamente Xm con el nuevo intervalo [ 0, 0.5 ].
+                        <br>
+                        <br>
+                        CALCULAMOS Xm:
+                    </p>
+                    <p class="neon-morado">
+                        Xm = (0 + 0.5) / 2 = 0.25
+                    </p>
+                    <br>
+                    <p>
+                        REDEFINIMOS INTERVALOS:
+                    </p>
+                    <p class="neon-dorado">
+                        f ( Xm ) = f ( 0.25 ) = e³⁽⁰'²⁵⁾ - 4 = e⁰'⁷⁵ - 4 &approx; 2.117 - 4 = - 1.883
+                        <br>
+                        <br>
+                        f ( Xi ) = f ( 0 ) = - 3
+                    </p>
+                    <br>
+                    <p>
+                        Al multiplicar ambos resultados, como f(Xm) * f(Xi) = (-1.883) * (-3) = 5.649 (positivo), concluimos que la raíz está en el segundo subintervalo.
+                    </p>
+                    <br>
+                    <p>
+                        CALCULAMOS ERROR:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-rojo"> &epsilon;<sub>a</sub> = | (0.25 - 0.5) / 0.25 | * 100 = | -0.25 / 0.25 | * 100 = 100%</p>
+                    <br>
+                    <p>
+                        No es menor al 1% que buscamos. Seguimos iterando.
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD ABAJO A LA IZQUIERDA - ITERACIÓN 3 -->
+    <div class="col-md-6">
+        <div class="card card-3">
+            <div class="card-header">
+                Iteración 3
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>
+                        Siguiendo con el procedimiento de bisección en el subintervalo [ 0.25, 0.5 ].
+                    </p>
+                    <br>
+                    <p>NUEVO INTERVALO:</p>
+                    <p class="neon-cyan">
+                        [ 0.25, 0.5 ]
+                    </p>
+                    <br>
+                    <p>
+                        Calculamos Xm:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-morado">
+                        Xm = (0.25 + 0.5) / 2 = 0.375
+                    </p>
+                    <br>
+                    <p>
+                        REDEFINIMOS INTERVALOS:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-dorado">
+                        f ( Xm ) = f ( 0.375 ) = e³⁽⁰'³⁷⁵⁾ - 4 = e¹'¹²⁵ - 4 &approx; 3.080 - 4 = - 0.920
+                        <br>
+                        <br>
+                        f ( Xf ) = f ( 0.5 ) = e³⁽⁰'⁵⁾ - 4 = e¹'⁵ - 4 &approx; 4.482 - 4 = 0.482
+                    </p>
+                    <br>
+                    <p>
+                        Multiplicamos los signos: f(Xm) * f(Xf) = (-0.920) * (0.482) = -0.443 (negativo).
+                        <br>
+                        Esto indica que la raíz se encuentra en el subintervalo [ 0.25, 0.375 ].
+                        <br>
+                        <br>
+                        CALCULAMOS ERROR:
+                    </p>
+                    <p class="neon-rojo"> &epsilon;<sub>a</sub> = | (0.375 - 0.25) / 0.375 | * 100 = | 0.125 / 0.375 | * 100 = 33.33%</p>
+                    <br>
+                    <p>
+                        Aún lejos del 1% de error objetivo.
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD DERECHA ABAJO - ITERACIÓN 4 -->
+    <div class="col-md-6">
+        <div class="card card-3">
+            <div class="card-header">
+                Iteración 4
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>
+                        Utilizando el nuevo intervalo encontrado [ 0.25, 0.375 ].
+                    </p>
+                    <br>
+                    <p>NUEVO INTERVALO:</p>
+                    <p class="neon-cyan">
+                        [ 0.25, 0.375 ]
+                    </p>
+                    <br>
+                    <p>
+                        Calculamos Xm:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-morado">
+                        Xm = (0.25 + 0.375) / 2 = 0.3125
+                    </p>
+                    <br>
+                    <p>
+                        REDEFINIMOS INTERVALOS:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-dorado">
+                        f ( Xm ) = f ( 0.3125 ) = e³⁽⁰'³¹²⁵⁾ - 4 = e⁰'⁹³⁷⁵ - 4 &approx; 2.554 - 4 = - 1.446
+                        <br>
+                        <br>
+                        f ( Xi ) = f ( 0.25 ) = - 1.883
+                    </p>
+                    <br>
+                    <p>
+                        Al multiplicar: f(Xm) * f(Xi) = (-1.446) * (-1.883) = 2.723 (positivo). La raíz está en el subintervalo [ 0.3125, 0.375 ].
+                        <br>
+                        <br>
+                        CALCULAMOS ERROR:
+                    </p>
+                    <p class="neon-rojo"> &epsilon;<sub>a</sub> = | (0.3125 - 0.375) / 0.3125 | * 100 = | -0.0625 / 0.3125 | * 100 = 20%</p>
+                    <br>
+                    <p>
+                        Aún no llegamos al 1% de error. Necesitamos una iteración más.
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD ABAJO EXTRA - ITERACIÓN 5 -->
+    <div class="col-md-6">
+        <div class="card card-3">
+            <div class="card-header">
+                Iteración 5
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>
+                        Continuamos el método  [ 0.3125, 0.375 ].
+                    </p>
+                    <br>
+                    <p>NUEVO INTERVALO:</p>
+                    <p class="neon-cyan">
+                        [ 0.3125, 0.375 ]
+                    </p>
+                    <br>
+                    <p>
+                        Calculamos Xm:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-morado">
+                        Xm = (0.3125 + 0.375) / 2 = 0.34375
+                    </p>
+                    <br>
+                    <p>
+                        Redefinimos intervalos por última vez para verificar la convergencia.
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-dorado">
+                        f ( Xm ) = f ( 0.34375 ) = e³⁽⁰'³⁴³⁷⁵⁾ - 4 = e¹'⁰³¹²⁵ - 4 &approx; 2.804 - 4 = - 1.196
+                        <br>
+                        <br>
+                        f ( Xf ) = f ( 0.375 ) = - 0.920
+                    </p>
+                    <br>
+                    <p>
+                        Multiplicamos: f(Xm) * f(Xf) = (-1.196) * (-0.920) = 1.100 (positivo). La raíz está en el subintervalo [ 0.34375, 0.375 ].
+                        <br>
+                        <br>
+                        CALCULAMOS ERROR:
+                    </p>
+                    <p class="neon-rojo"> &epsilon;<sub>a</sub> = | (0.34375 - 0.3125) / 0.34375 | * 100 = | 0.03125 / 0.34375 | * 100 &approx; 0.909%</p>
+                    <br>
+                    <p>
+                        <span style="color: limegreen;">Listo, El error del 0.909% es menor al 1% deseado.</span> Nos quedamos con este valor de raíz aproximada ($X_m \approx 0.34375$).
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Ejercicio 6 -->
+<div class="card card-3">
+    <div class="card-body">
+        <blockquote class="blockquote mb-0">
+            <p> EJERCICIO #6 </p>
+        </blockquote>
+    </div>
+</div>
+
+<div class="card card-3">
+    <div class="card-body">
+        <blockquote class="blockquote mb-0">
+            <p>
+                Tenemos F(x) = 4x² - 5x encontrar la raiz en el intervalo [ 1, 1.6 ]
+                para i = 8 iteraciones usando el método de bisección.
+            </p>
+        </blockquote>
+    </div>
+</div>
+
+<br>
+<br>
+
+<!-- CONTENEDOR DE LAS CARDS -->
+<div class="row">
+
+    <!-- CARD IZQUIERDA - ITERACIÓN 1 -->
+    <div class="col-md-6">
+        <div class="card card-3">
+            <div class="card-header">
+                Iteración 1
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>
+                        Primero evaluamos las funciones en los extremos del intervalo inicial [ 1, 1.6 ].
+                    </p>
+                    <br>
+                    <p>EVALUAMOS:</p>
+                    <p class="neon-cyan">
+                        f ( Xi ) = f ( 1 ) = 4(1)² - 5(1) = 4 - 5 = - 1
+                        <br>
+                        <br>
+                        f ( Xf ) = f ( 1.6 ) = 4(1.6)² - 5(1.6) = 10.24 - 8 = 2.24
+                    </p>
+                    <br>
+                    <p>
+                        Calculamos el punto medio Xm:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-morado">
+                        Xm = (1.6 + 1) / 2 = 1.3
+                    </p>
+                    <br>
+                    <p>
+                        Redefinimos intervalos evaluando Xm:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-dorado">
+                        f ( Xm ) = f ( 1.3 ) = 4(1.3)² - 5(1.3) = 6.76 - 6.5 = 0.26
+                        <br>
+                        <br>
+                        f ( Xi ) = f ( 1 ) = - 1
+                    </p>
+                    <br>
+                    <p>
+                        Multiplicamos resultados: f(Xm) * f(Xi) = 0.26 * (-1) = -0.26 (negativo).
+                        <br>
+                        Como es negativo, Xm va a ser Xf en el nuevo intervalo.
+                        <br>
+                        <br>
+                        Dato: Al ser la primera iteración, el error se calcula a partir de la 2da iteración.
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD DERECHA - ITERACIÓN 2 -->
+    <div class="col-md-6">
+        <div class="card card-3">
+            <div class="card-header">
+                Iteración 2
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>
+                        Establecemos el nuevo intervalo con base en la iteración anterior.
+                    </p>
+                    <br>
+                    <p>NUEVO INTERVALO:</p>
+                    <p class="neon-cyan">
+                        [ 1, 1.3 ]
+                    </p>
+                    <br>
+                    <p>
+                        Calculamos nuevamente Xm:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-morado">
+                        Xm = (1.3 + 1) / 2 = 1.15
+                    </p>
+                    <br>
+                    <p>
+                        REDEFINIMOS INTERVALOS:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-dorado">
+                        f ( Xm ) = f ( 1.15 ) = 4(1.15)² - 5(1.15) = 5.29 - 5.75 = - 0.46
+                        <br>
+                        <br>
+                        f ( Xi ) = f ( 1 ) = - 1
+                    </p>
+                    <br>
+                    <p>
+                        Multiplicamos resultados: f(Xm) * f(Xi) = (-0.46) * (-1) = 0.46 (positivo).
+                        <br>
+                        Como es positivo, Xm pasa a ser Xi en el nuevo intervalo.
+                        <br>
+                        <br>
+                        ERROR:
+                    </p>
+                    <p class="neon-rojo"> | 1.15 - 1 / 1.15 | * 100 = 13.04%</p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD ABAJO IZQUIERDA - ITERACIÓN 3 -->
+    <div class="col-md-6">
+        <div class="card card-3">
+            <div class="card-header">
+                Iteración 3
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>
+                        Nuevo intervalo obtenido:
+                    </p>
+                    <br>
+                    <p>NUEVO INTERVALO:</p>
+                    <p class="neon-cyan">
+                        [ 1.15, 1.3 ]
+                    </p>
+                    <br>
+                    <p>
+                        Calculamos Xm:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-morado">
+                        Xm = (1.3 + 1.15) / 2 = 1.225
+                    </p>
+                    <br>
+                    <p>
+                        REDEFINIMOS INTERVALOS:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-dorado">
+                        f ( Xm ) = f ( 1.225 ) = 4(1.225)² - 5(1.225) = 6.0025 - 6.125 = - 0.1225
+                        <br>
+                        <br>
+                        f ( Xi ) = f ( 1.15 ) = - 0.46
+                    </p>
+                    <br>
+                    <p>
+                        Multiplicamos resultados: (-0.1225) * (-0.46) = 0.05635 (positivo).
+                        <br>
+                        Xm pasa a ser Xi.
+                        <br>
+                        <br>
+                        ERROR:
+                    </p>
+                    <p class="neon-rojo"> | 1.225 - 1.15 / 1.225 | * 100 = 6.12%</p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD ABAJO DERECHA - ITERACIÓN 4 -->
+    <div class="col-md-6">
+        <div class="card card-3">
+            <div class="card-header">
+                Iteración 4
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>
+                        Continuamos con el proceso para la cuarta iteración.
+                    </p>
+                    <br>
+                    <p>NUEVO INTERVALO:</p>
+                    <p class="neon-cyan">
+                        [ 1.225, 1.3 ]
+                    </p>
+                    <br>
+                    <p>
+                        Calculamos Xm:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-morado">
+                        Xm = (1.3 + 1.225) / 2 = 1.2625
+                    </p>
+                    <br>
+                    <p>
+                        REDEFINIMOS INTERVALOS:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-dorado">
+                        f ( Xm ) = f ( 1.2625 ) = 4(1.2625)² - 5(1.2625) = 6.3756 - 6.3125 = 0.0631
+                        <br>
+                        <br>
+                        f ( Xi ) = f ( 1.225 ) = - 0.1225
+                    </p>
+                    <br>
+                    <p>
+                        Multiplicamos resultados: 0.0631 * (-0.1225) = -0.0077 (negativo).
+                        <br>
+                        Xm pasa a ser Xf.
+                        <br>
+                        <br>
+                        ERROR:
+                    </p>
+                    <p class="neon-rojo"> | 1.2625 - 1.225 / 1.2625 | * 100 = 2.97%</p>
+                    <br>
+                    <p>Continuamos las iteraciones restantes hasta llegar a i = 8.</p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+    <!-- CARD IZQUIERDA - ITERACIÓN 5 -->
+    <div class="col-md-6">
+        <div class="card card-3">
+            <div class="card-header">
+                Iteración 5
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>
+                        Continuamos con el nuevo intervalo obtenido en la iteración 4.
+                    </p>
+                    <br>
+                    <p>NUEVO INTERVALO:</p>
+                    <p class="neon-cyan">
+                        [ 1.225, 1.2625 ]
+                    </p>
+                    <br>
+                    <p>
+                        Calculamos Xm:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-morado">
+                        Xm = (1.2625 + 1.225) / 2 = 1.24375
+                    </p>
+                    <br>
+                    <p>
+                        REDEFINIMOS INTERVALOS:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-dorado">
+                        f ( Xm ) = f ( 1.24375 ) = 4(1.24375)² - 5(1.24375) = 6.1876 - 6.2187 = - 0.0311
+                        <br>
+                        <br>
+                        f ( Xi ) = f ( 1.225 ) = - 0.1225
+                    </p>
+                    <br>
+                    <p>
+                        Multiplicamos resultados: (-0.0311) * (-0.1225) = 0.0038 (positivo).
+                        <br>
+                        Xm pasa a ser Xi.
+                        <br>
+                        <br>
+                        ERROR:
+                    </p>
+                    <p class="neon-rojo"> | 1.24375 - 1.2625 / 1.24375 | * 100 = 1.51%</p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD DERECHA - ITERACIÓN 6 -->
+    <div class="col-md-6">
+        <div class="card card-3">
+            <div class="card-header">
+                Iteración 6
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>
+                        Avanzamos a la sexta iteración con el nuevo intervalo.
+                    </p>
+                    <br>
+                    <p>NUEVO INTERVALO:</p>
+                    <p class="neon-cyan">
+                        [ 1.24375, 1.2625 ]
+                    </p>
+                    <br>
+                    <p>
+                        Calculamos Xm:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-morado">
+                        Xm = (1.2625 + 1.24375) / 2 = 1.2531
+                    </p>
+                    <br>
+                    <p>
+                        REDEFINIMOS INTERVALOS:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-dorado">
+                        f ( Xm ) = f ( 1.2531 ) = 4(1.2531)² - 5(1.2531) = 6.2812 - 6.2655 = 0.0157
+                        <br>
+                        <br>
+                        f ( Xi ) = f ( 1.24375 ) = - 0.0311
+                    </p>
+                    <br>
+                    <p>
+                        Multiplicamos resultados: 0.0157 * (-0.0311) = -0.0004 (negativo).
+                        <br>
+                        Xm pasa a ser Xf.
+                        <br>
+                        <br>
+                        ERROR:
+                    </p>
+                    <p class="neon-rojo"> | 1.2531 - 1.24375 / 1.2531 | * 100 = 0.75%</p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD ABAJO IZQUIERDA - ITERACIÓN 7 -->
+    <div class="col-md-6">
+        <div class="card card-3">
+            <div class="card-header">
+                Iteración 7
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>
+                        Séptima iteración acercándonos a la raíz exacta.
+                    </p>
+                    <br>
+                    <p>NUEVO INTERVALO:</p>
+                    <p class="neon-cyan">
+                        [ 1.24375, 1.2531 ]
+                    </p>
+                    <br>
+                    <p>
+                        Calculamos Xm:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-morado">
+                        Xm = (1.2531 + 1.24375) / 2 = 1.2484
+                    </p>
+                    <br>
+                    <p>
+                        REDEFINIMOS INTERVALOS:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-dorado">
+                        f ( Xm ) = f ( 1.2484 ) = 4(1.2484)² - 5(1.2484) = 6.2343 - 6.2420 = - 0.0077
+                        <br>
+                        <br>
+                        f ( Xi ) = f ( 1.24375 ) = - 0.0311
+                    </p>
+                    <br>
+                    <p>
+                        Multiplicamos resultados: (-0.0077) * (-0.0311) = 0.0002 (positivo).
+                        <br>
+                        Xm pasa a ser Xi.
+                        <br>
+                        <br>
+                        ERROR:
+                    </p>
+                    <p class="neon-rojo"> | 1.2484 - 1.2531 / 1.2484 | * 100 = 0.38%</p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD ABAJO DERECHA - ITERACIÓN 8 -->
+    <div class="col-md-6">
+        <div class="card card-3">
+            <div class="card-header">
+                Iteración 8 (Final)
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>
+                        Octava y última iteración solicitada.
+                    </p>
+                    <br>
+                    <p>NUEVO INTERVALO:</p>
+                    <p class="neon-cyan">
+                        [ 1.2484, 1.2531 ]
+                    </p>
+                    <br>
+                    <p>
+                        Calculamos Xm:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-morado">
+                        Xm = (1.2531 + 1.2484) / 2 = 1.2508
+                    </p>
+                    <br>
+                    <p>
+                        REDEFINIMOS INTERVALOS:
+                        <br>
+                        <br>
+                    </p>
+                    <p class="neon-dorado">
+                        f ( Xm ) = f ( 1.2508 ) = 4(1.2508)² - 5(1.2508) = 6.2580 - 6.2540 = 0.0040
+                        <br>
+                        <br>
+                        f ( Xi ) = f ( 1.2484 ) = - 0.0077
+                    </p>
+                    <br>
+                    <p>
+                        Multiplicamos resultados: 0.0040 * (-0.0077) = -0.00003 (negativo).
+                        <br>
+                        Xm pasa a ser Xf.
+                        <br>
+                        <br>
+                        ERROR:
+                    </p>
+                    <p class="neon-rojo"> | 1.2508 - 1.2484 / 1.2508 | * 100 = 0.19%</p>
+                    <br>
+                    <p>¡Concluimos las 8 iteraciones con una raíz aproximada de 1.2508!</p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+    <!--TABLA BISECCIÓN, LA CALCULADORA EN OTRAS PALABRAS-->
+
+    <section class="calculadora">
+        <h2>Método de Bisección</h2>
+        <p class="descripcion">
+            Introduce la función y los datos disponibles.
+        </p>
+
+        <!-- Funcion -->
+
+        <div class="campo funcion-campo">
+            <label for="funcion">Función f(x)</label>
+            <input type="text" id="funcion" placeholder="Ejemplo: cos(0.5e^-x)+x^2-2">
+
+            <!-- BOTONES DE FUNCIONES -->
+
+            <div class="botones-funciones">
+                <button type="button" onclick="agregarFuncion('sin(')"> sen </button>
+                <button type="button" onclick="agregarFuncion('cos(')"> cos </button>
+                <button type="button" onclick="agregarFuncion('tan(')"> tan </button>
+                <button type="button" onclick="agregarFuncion('e^x')"> eˣ </button>
+                <button type="button" onclick="agregarFuncion('sqrt(')"> √ </button>
+                <button type="button" onclick="agregarFuncion('ln(')"> ln </button>
+                <button type="button" onclick="agregarFuncion('log(')"> log </button>
+                <button type="button" onclick="agregarFuncion('x^2')"> x² </button>
+            </div>
+        </div>
+
+        <!-- intervalos -->
+
+        <div class="formulario">
+            <div class="campo">
+                <label for="a"> Intervalo a </label>
+                <input type="number" id="a" placeholder="Automático" step="any">
+            </div>
+            <div class="campo">
+                <label for="b"> Intervalo b </label>
+                <input type="number" id="b" placeholder="Automático" step="any">
+            </div>
+
+            <!-- tolerancia -->
+
+            <div class="campo">
+                <label for="tolerancia"> Tolerancia </label>
+                <input type="number" id="tolerancia" placeholder="Predeterminada: 0.01" step="any">
+            </div>
+
+            <!-- iteraciones -->
+
+            <div class="campo">
+                <label for="maxIteraciones"> Máximo de iteraciones </label>
+                <input type="number" id="maxIteraciones" placeholder="Predeterminado: 100" min="1">
+            </div>
+            <button type="button" onclick="calcularBiseccion()"> CALCULAR </button>
+        </div>
+
+        <!-- msj -->
+
+        <div id="mensaje"></div>
+
+        <!-- resultado -->
+
+        <div id="resultado" class="resultado">
+            <h3>Resultado</h3>
+            <p>
+                <strong>Raíz aproximada:</strong>
+                <span id="raiz"></span>
+            </p>
+            <p>
+                <strong>Iteraciones:</strong>
+                <span id="numeroIteraciones"></span>
+            </p>
+            <p>
+                <strong>Intervalo utilizado:</strong>
+                <span id="intervaloUtilizado"></span>
+            </p>
+            <p>
+                <strong>Tolerancia utilizada:</strong>
+                <span id="toleranciaUtilizada"></span>
+            </p>
+        </div>
+
+        <!-- Tabla -->
+
+        <div class="tabla-container">
+            <table id="tablaBiseccion">
+                <thead>
+                    <tr>
+                        <th>Iteración</th>
+                        <th>a</th>
+                        <th>b</th>
+                        <th>Xm</th>
+                        <th>f(Xm)</th>
+                        <th>Error</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaResultados"></tbody>
+            </table>
+        </div>
+    </section>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <!--Aqui footer-->
+
+    <footer>
+        <div class="container container-1">
+            <div class="row row-1">
+                <div class="col">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a class="a-1" href="./index.html">Inicio</a></li>
+                        <li><a class="a-1" href="./ejercicios.html">Ejercicios</a></li>
+                        <li><a class="a-1" href="#">Redes Sociales</a></li>
+                        <li><a class="a-1" href="./datosCuriosos.html">Datos Curiosos</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Contacto</h3>
+                    <p>Dirección: UNAM FES ARAGÓN.</p>
+                    <p>Carrera: Ingenieria en Computación</p>
+                    <p>Correo electronico: skibidi67@gmail.com</p>
+                </div>
+                <div class="col">
+                    <h3>Participantes del equipo</h3>
+                    <p>Aguilera Villavicencio Hayat</p>
+                    <p>Cervantes Márquez Joan Antonio</p>
+                    <p>Casarrubias Peñaloza Valeria Guadalupe</p>
+                    <p>Espinosa Rojas Jonatan Mateo</p>
+                    <p>Garduño Muñoa Allison Daniela</p>
+                    <p>Luque Mendoza David</p>
+                    <p>Zamora Tierrablanca Saúl Isai</p>
+                </div>
+
+                <!--Redes sociales-->
+
+                <div class="redes-sociales">
+                    <a href="https://www.facebook.com/share/19FYYNyHim/" class="red-social facebook" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/numerica.exe?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" class="red-social instagram" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="red-social youtube" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--js para la funcion de la pagina-->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@14/lib/browser/math.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
