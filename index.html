@@ -35,24 +35,57 @@
 
                 <!--lista de los botones-->
                 <ul class="navbar-nav">
+
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="./index.html">
+                            Inicio
+                        </a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="./datosCuriosos.html">Datos curiosos</a>
+                        <a class="nav-link" href="./datosCuriosos.html">
+                            Datos curiosos
+                        </a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./errores.html">
+                            Errores
+                        </a>
+                    </li>
+
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle"
+                            href="#"
+                            id="navbarDropdownMenuLink"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             Ejercicios
                         </a>
+
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="./ejercicios.html">Bisección cerrada</a></li>
-                            <li><a class="dropdown-item" href="./biseccionAbierta.html">Bisección abierta</a></li>
-                            <li><a class="dropdown-item" href="#">método mati</a></li>
+
+                            <li>
+                                <a class="dropdown-item" href="./ejercicios.html">
+                                    Bisección cerrada
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="./biseccionAbierta.html">
+                                    Bisección abierta
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Método de Newton
+                                </a>
+                            </li>
+
                         </ul>
                     </li>
-                </ul>
             </div>
         </div>
 
@@ -70,8 +103,52 @@
         </div>
     </nav>
 
-    <br>
-    <br>
+
+    <!-- Portada principal -->
+    <section class="hero">
+        <div class="hero-text">
+            <p class="hero-subtitle">MÉTODOS NUMÉRICOS</p>
+
+            <h1>Aprende, calcula y comprende</h1>
+
+            <p>
+                Explora conceptos, métodos y ejercicios de Métodos Numéricos
+                de una manera sencilla e interactiva.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="./ejercicios-menu.html" class="hero-button">
+                    Ver ejercicios
+                </a>
+
+                <a href="./datosCuriosos.html" class="hero-button secondary">
+                    Datos curiosos
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-decoration">
+            <div class="math-symbol">∫</div>
+            <div class="math-symbol">Σ</div>
+            <div class="math-symbol">√</div>
+            <div class="math-symbol">π</div>
+        </div>
+    </section>
+
+    <!-- Nuestro equipo -->
+
+<section class="team-section">
+
+    <div class="section-title">
+        <span>LOS TELEKIRKIES</span>
+        <h2>Nuestro equipo</h2>
+        <p>
+            Conoce a las personas que forman parte de este proyecto
+            de Métodos Numéricos.
+        </p>
+    </div>
+
+
 
     <!--Carrusel de cards-->
     <div class="carousel carousel-1">
@@ -125,105 +202,49 @@
         </div>
     </div>
 
-    <br>
-    <br>
+</section> 
 
-    <!--Información proporcionada en clases para el apartado inicio (Cards)-->
+<!-- Seccion principal de calculadoras -->
 
-    <div class="container container-2">
-        <div class="card card-2">
-            <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                    <p>Esta pagina se centra especificamente para ver lo que se ha hecho a través del semestre en
-                        Métodos Numéricos,
-                        veremos los ejercicios, datos curiosos e información que se proporcionará a lo largo de las
-                        clases.
-                    </p>
-                </blockquote>
-            </div>
+<section class="calculadoras-section">
+
+    <div class="section-title">
+        <span>APRENDE Y CALCULA</span>
+        <h2>Calculadoras</h2>
+        <p>
+            Selecciona un método numérico y comienza a resolver.
+        </p>
+    </div>
+
+    <div class="calculadoras-container">
+
+        <div class="calculadora-card">
+            <h3>Bisección cerrada</h3>
+            <p>
+                Encuentra las raíces de una función mediante intervalos.
+            </p>
+            <a href="./calculadora-biseccion.html">Ir a calculadora</a>
         </div>
 
-        <br>
-        <br>
+        <div class="calculadora-card">
+            <h3>Bisección abierta</h3>
+            <p>
+                Resuelve ecuaciones utilizando aproximaciones sucesivas.
+            </p>
+            <a href="#">Ir a calculadora</a>
+        </div>
 
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="card card-2">
-                    <div class="card-body">
-                        <h5 class="card-title">1° ERRORES ILEGITIMOS</h5>
-                        <p class="card-text">Estos errores solo pueden ocurrir por el ser humano.</p>
-                        <a href="#" class="btn btn-primary">Ejemplo</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="card card-2">
-                    <div class="card-body">
-                        <h5 class="card-title">2° ERRORES DE REDONDEO</h5>
-                        <p class="card-text">Son los errores donde definimos un número finito para obtener una
-                            aproximación.</p>
-                        <a href="#" class="btn btn-primary">Ejemplo</a>
-                    </div>
-                </div>
-            </div>
+        <div class="calculadora-card">
+            <h3>Método de Newton</h3>
+            <p>
+                Aproxima raíces utilizando derivadas y valores iniciales.
+            </p>
+            <a href="#">Ir a calculadora</a>
         </div>
 
     </div>
 
-    <br>
-    <br>
-
-    <!--Inicia el carrusel-->
-
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-
-                <!--Imagen 1-->
-                <img src="./imagenes/metodo_biseccion.png" class="d-block w-50 mx-auto" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-
-                <!--Imagen 2-->
-                <img src="./imagenes/imagen1.jpg" class="d-block w-50 mx-auto" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-
-                <!--Imagen 3-->
-                <img src="./imagenes/imagen2.jpg" class="d-block w-40 mx-auto" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+</section>
 
     <br>
     <br>

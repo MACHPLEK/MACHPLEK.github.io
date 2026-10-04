@@ -1,381 +1,572 @@
-*{
+/*base */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*color de fondo - pagina web*/
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: "Poppins", sans-serif;
-    background: #000000;
-    margin: 0;
-    padding: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #f7fbff;
+    color: #111111;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/*Footer - NO TOCAR*/
-footer{
-    background-color: #00ff881e;
-    color:#00ff88;
-    padding: 20px 0;
-    display: flex;
+a {
+    color: inherit;
 }
 
-.container-1{
-    width: 90%;
+p {
+    color: #222222;
+    font-size: 17px;
+    line-height: 1.6;
 }
 
-.row-1{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-}
-
-ul{
+ul {
     list-style: none;
     padding: 0;
 }
 
-ul li{
-    margin-bottom: 10px;
-}
 
-.a-1{
-    color: #dbffdd;
-    text-decoration: none;
-}
+/* navbar */
 
-.a-1:hover{
-    color: #00ff88 !important;
-}
-
-/* Contenedor de redes */
-.redes-sociales {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    width: 100%;
-    margin-top: 20px;
-}
-
-/* Botones de redes sociales */
-.red-social {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    border-radius: 50%;
-    color: white !important;
-    text-decoration: none;
-    box-sizing: border-box;
-    transition: transform 0.4s ease;
-}
-
-/* Tamaño del icono */
-.red-social i {
-    font-size: 20px;
-}
-
-/* Facebook */
-.facebook {
-    background-color: blue;
-    box-shadow: 0 0 30px rgba(0, 100, 255, 0.7);
-}
-
-/* Instagram */
-.instagram {
-    background-color: #ff0080;
-    box-shadow: 0 0 30px rgba(238, 130, 238, 0.7);
-}
-
-/* YouTube */
-.youtube {
-    background-color: red;
-    box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
-}
-
-/* Hover */
-.red-social:hover {
-    transform: scale(1.15);
-    color: white !important;
-}
-
-/*
-LO QUE SIGUE ES DEL NAVBAR
-NO MOVER MUCHO A MENOS QUE SEA NECESARIO
-SIEMPRE COMENTAR QUE HACE CADA COSA
-PARA NO PERDER LA DOCUMENTACION :)
-*/
-
-
-/*el color del equipo*/
-h1{
-    color:#00ff88;
-}
-
-/*padding del nav*/
 nav {
-    padding: 1rem 5%;
+    padding: 12px 4%;
 }
 
-/*los cambios del navbar*/
-.navbar{
-    border: 3px solid;
-    border-radius: 15px;
-    border-color: #00ff88;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    box-shadow: 0 10px 15px rgba(0, 151, 50, 0.3);
+.navbar {
+    background-color: #ffffff !important;
+    border: 1px solid #d8e9f7 !important;
+    border-radius: 22px;
+    margin: 18px 3% 0;
+    padding: 10px 25px;
+    box-shadow: 0 6px 25px rgba(55, 145, 205, 0.12);
 }
 
-/* color de los botones del navbar */
+.navbar-brand img {
+    width: 170px;
+    height: auto;
+    object-fit: contain;
+}
+
 .navbar .nav-link {
-    color: white !important;
+    color: #111111 !important;
+    font-weight: 600;
+    padding: 10px 15px !important;
+    border-radius: 18px;
+    transition: 0.25s ease;
 }
 
-/* color cuando pasas el mouse */
 .navbar .nav-link:hover {
-    color: #00ff88 !important;
+    color: #1677b8 !important;
+    background-color: #e8f5ff;
 }
 
-/* color del botón activo */
 .navbar .nav-link.active {
-    color: #00ff88 !important;
+    color: #1677b8 !important;
+    background-color: #e8f5ff;
 }
 
-/* color de los elementos del menú desplegable */
+
+/* desplegable */
+
+.navbar .dropdown-menu {
+    border: 1px solid #d8e9f7 !important;
+    border-radius: 16px;
+    background-color: #ffffff !important;
+    box-shadow: 0 10px 28px rgba(40, 120, 180, 0.14);
+    padding: 8px;
+}
+
 .navbar .dropdown-item {
-    color: black;
+    color: #111111 !important;
+    border-radius: 10px;
+    padding: 10px 15px;
+    transition: 0.2s ease;
 }
 
-/* color al pasar el mouse en el menú desplegable */
 .navbar .dropdown-item:hover {
-    color: white;
-    background-color: #00ff88;
+    background-color: #dff2ff !important;
+    color: #1677b8 !important;
 }
 
-/*menu hamburguesa*/
+
+/* Botón hamburguesa */
+
 .navbar-toggler {
-    border: 2px solid #00ff88;
+    border: 2px solid #4fa9d8 !important;
+    border-radius: 10px;
 }
 
-/*igual menu hamburguesa pero este es el icono
-DATO: no mover la url que contiene la imagen de las lineas del menu
-*/
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%2300ff88' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%234fa9d8' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
-/*lista desplegable del boton datos curiosos*/
-.dropdown-menu {
-    background-color: #000 !important;
-}
 
-/* Texto blanco de datos curiosos*/
-.dropdown-item {
-    color: #fff !important;
-}
+/* portada */
 
-/* Cuando pasas el mouse datos curiosos */
-.dropdown-item:hover {
-    background-color: #00ff9d !important;
-    color: #fff !important;
-}
-
-/*
-LO QUE SIGUE ES DEL carrusel
-NO MOVER MUCHO A MENOS QUE SEA NECESARIO
-SIEMPRE COMENTAR QUE HACE CADA COSA
-PARA NO PERDER LA DOCUMENTACION :)
-*/
-
-/*carrusel 1*/
-.carousel-1{
-    margin: 100px auto;
+.hero {
     width: 90%;
-    display: flex;
-    overflow-x: auto;
-}
-
-
-.carousel-1::-webkit-scrollbar{
-    display: none;
-}
-
-.group-1{
+    max-width: 1200px;
+    min-height: 430px;
+    margin: 55px auto 45px;
+    padding: 60px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1em;
-    animation: spin 15s infinite linear;
-    padding-right: 1em;
-}
-
-/*card del carrusel 1*/
-.card-1 {
-    flex: 0 0 200px;
-    width: 200px;
-    height: 200px;
-
-    border-radius: 15px;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #ffffff 0%, #eaf6ff 100%);
+    border: 1px solid #d8edf9;
+    border-radius: 30px;
+    box-shadow: 0 12px 35px rgba(52, 147, 201, 0.13);
     overflow: hidden;
+}
 
-    background: #00ff88;
+.hero-text {
+    width: 60%;
+}
 
+.hero-subtitle {
+    color: #1680bd !important;
+    font-size: 15px !important;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    color: #111111;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-text > p:not(.hero-subtitle) {
+    color: #222222 !important;
+    font-size: 18px;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 14px;
+    background-color: #4fa9d8;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.hero-button:hover {
+    background-color: #267eaf;
+    color: #ffffff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(38, 126, 175, 0.2);
+}
+
+.hero-button.secondary {
+    background-color: #ffffff;
+    color: #111111 !important;
+    border: 2px solid #f0a8b8;
+}
+
+.hero-button.secondary:hover {
+    background-color: #f8dce2;
+    color: #111111 !important;
+}
+
+.hero-decoration {
+    width: 35%;
+    height: 300px;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.math-symbol {
+    position: absolute;
+    color: #4fa9d8;
+    font-size: 75px;
+    font-weight: bold;
+    opacity: 0.18;
+}
+
+.math-symbol:nth-child(1) {
+    top: 20px;
+    left: 30px;
+}
+
+.math-symbol:nth-child(2) {
+    top: 130px;
+    right: 20px;
+}
+
+.math-symbol:nth-child(3) {
+    bottom: 10px;
+    left: 80px;
+}
+
+.math-symbol:nth-child(4) {
+    top: 70px;
+    left: 150px;
+}
+
+
+/* TÍTULOS DE SECCIÓN */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title span {
+    color: #e28c9e;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    color: #111111;
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.section-title p {
+    color: #333333 !important;
+    font-size: 17px;
+}
+
+
+/* seccion del equipo */
+
+.team-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto 80px;
+}
+
+.carousel-1 {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+    border-radius: 24px;
+}
+
+.group-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    animation: spin 25s infinite linear;
+    padding-right: 20px;
+}
+
+.card-1 {
+    flex: 0 0 190px;
+    width: 190px;
+    height: 230px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #ffffff;
+    padding: 6px;
+    border: 1px solid #d9edf9;
+    box-shadow: 0 7px 22px rgba(52, 147, 201, 0.14);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-1 img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
     display: block;
+    border-radius: 15px;
 }
 
-/*animación del carrusel - no mover*/
-@keyframes spin{
-    from{translate: 0;}
-    to{translate: -100%;}
+.card-1:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 30px rgba(52, 147, 201, 0.22);
 }
 
-/*
-LO QUE SIGUE ES DEL TEXTO
-NO MOVER MUCHO A MENOS QUE SEA NECESARIO
-SIEMPRE COMENTAR QUE HACE CADA COSA
-PARA NO PERDER LA DOCUMENTACION :)
-*/
+@keyframes spin {
+    from {
+        translate: 0;
+    }
 
-p{
-    color: #dbffdd;
-    font-size: 18px;
+    to {
+        translate: -100%;
+    }
 }
 
-/*fluoresente*/
-.neon-cyan{
-    color: #fff;
-    font-family: sans-serif;
-    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
 
-    line-height: 1;
-    margin: 0;
-    padding: 0;
+/* =========================================================
+   CALCULADORAS
+   ========================================================= */
+
+.calculadoras-section {
+    padding: 75px 8%;
+    text-align: center;
+    background-color: #edf8ff;
+    border-top: 1px solid #d8edf9;
+    border-bottom: 1px solid #d8edf9;
 }
 
-/*fluoresente*/
-.neon-morado{
-    color: #fff;
-    font-family: sans-serif;
-    text-shadow: 0 0 5px #6f00ff, 0 0 10px #6f00ff, 0 0 20px #6f00ff, 0 0 40px #6f00ff;
-
-    line-height: 1;
-    margin: 0;
-    padding: 0;
+.calculadoras-section .section-title {
+    margin-bottom: 40px;
 }
 
-/*fluoresente*/
-.neon-dorado{
-    color: #fff;
-    font-family: sans-serif;
-    text-shadow: 0 0 5px #a6ff00, 0 0 10px #a6ff00, 0 0 20px #a6ff00, 0 0 40px #a6ff00;
-
-    line-height: 1;
-    margin: 0;
-    padding: 0;
+.calculadoras-section .section-title span {
+    color: #e28c9e;
 }
 
-/*fluoresente*/
-.neon-rojo{
-    color: #fff;
-    font-family: sans-serif;
-    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000;
-
-    line-height: 1;
-    margin: 0;
-    padding: 0;
+.calculadoras-section .section-title h2 {
+    color: #111111;
 }
 
-/*
-LO QUE SIGUE ES DEL Card
-NO MOVER MUCHO A MENOS QUE SEA NECESARIO
-SIEMPRE COMENTAR QUE HACE CADA COSA
-PARA NO PERDER LA DOCUMENTACION :)
-*/
+.calculadoras-section .section-title p {
+    color: #333333;
+}
 
-.card-2 {
+.calculadoras-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.calculadora-card {
+    background-color: #ffffff;
+    width: 300px;
+    padding: 30px 25px;
+    border: 1px solid #d8edf9;
+    border-radius: 22px;
+    box-shadow: 0 8px 25px rgba(52, 147, 201, 0.11);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calculadora-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(52, 147, 201, 0.18);
+}
+
+.calculadora-card h3 {
+    color: #111111;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.calculadora-card p {
+    color: #222222;
+    min-height: 70px;
+    line-height: 1.5;
+}
+
+.calculadora-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 11px 22px;
+    background-color: #4fa9d8;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.calculadora-card a:hover {
+    background-color: #267eaf;
+    transform: translateY(-2px);
+}
+
+
+/*   PAGINA ERRORES.HTML    */
+
+.errores-section {
+    padding: 70px 8%;
+    text-align: center;
+    background-color: #f7fbff;
+    min-height: 70vh;
+}
+
+.errores-section .section-title {
+    margin-bottom: 40px;
+}
+
+.errores-section .section-title span {
+    color: #e28c9e;
+}
+
+.errores-section .section-title h2 {
+    color: #111111;
+}
+
+.errores-section .section-title p {
+    color: #333333;
+}
+
+.errores-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.error-card {
+    background-color: #ffffff;
+    width: 300px;
+    padding: 22px 25px;
+    border: 1px solid #d8edf9;
+    border-radius: 22px;
+    box-shadow: 0 8px 25px rgba(52, 147, 201, 0.11);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.error-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(52, 147, 201, 0.18);
+}
+
+.error-card h3 {
+    color: #111111;
+    font-size: 23px;
+    margin-bottom: 0;
+}
+
+.error-card p {
+    color: #222222;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.error-info {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-top: 0;
+    transition: max-height 0.45s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+.error-card.active .error-info {
+    max-height: 350px;
+    opacity: 1;
+    margin-top: 18px;
+}
+
+.error-card.active {
+    transform: translateY(-5px);
+}
+
+.formula {
+    margin: 18px 0;
+    padding: 12px;
+    background-color: #e7f5ff;
+    color: #1677b8;
+    border: 1px solid #cceafa;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+
+
+.card-2,
+.card-3 {
     display: inline-block;
     outline: 0;
-    border: 0;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 14px 24px 16px;
     font-weight: 700;
     line-height: 1;
     text-align: justify;
     transition: transform 200ms, background 200ms;
-    background: transparent;
-    color: #00ff88;
-    box-shadow: 0 0 0 3px #00ff88 inset;
+    background: #ffffff;
+    color: #1677b8;
+    border: 2px solid #4fa9d8;
+    box-shadow: none;
 }
 
-.card-2:hover {
+.card-2:hover,
+.card-3:hover {
     transform: translateY(-2px);
+    background-color: #e8f6ff;
 }
 
-.card-3 {
-    display: inline-block;
-    outline: 0;
-    margin: 10px;
-    border: 0;
-    border-radius: 8px;
-    padding: 14px 24px 16px;
-    font-weight: 700;
+
+
+.neon-cyan,
+.neon-morado,
+.neon-dorado,
+.neon-rojo {
+    color: #111111;
+    font-family: sans-serif;
+    text-shadow: none;
     line-height: 1;
-    text-align: justify;
-    background: transparent;
-    color: #00ff88;
-    box-shadow: 0 0 0 3px #00ff88 inset;
+    margin: 0;
+    padding: 0;
+}
+
+.neon-cyan {
+    color: #1677b8;
+}
+
+.neon-morado {
+    color: #4f8fb8;
+}
+
+.neon-dorado {
+    color: #e28c9e;
+}
+
+.neon-rojo {
+    color: #d86f86;
 }
 
 
-/*Calculadora apartir de aqui ------------ NO TOCAAAAR*/
+/*   Calculadora-bisección.html   */
 
 .calculadora {
     width: 90%;
     max-width: 1100px;
     margin: 50px auto;
     padding: 30px;
-    background: #111;
-    border: 2px solid #00ff88;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 255, 136, 0.25);
-    color: white;
-    box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid #cceafa;
+    border-radius: 22px;
+    box-shadow: 0 10px 30px rgba(52, 147, 201, 0.12);
+    color: #111111;
 }
 
 .calculadora h2 {
     text-align: center;
-    color: #00ff88;
+    color: #111111;
     margin-bottom: 10px;
 }
 
 .descripcion {
     text-align: center;
-    color: #ccc;
+    color: #333333 !important;
     margin-bottom: 30px;
 }
-
-/* esto es del formulario */
 
 .formulario {
     display: grid;
@@ -391,39 +582,37 @@ PARA NO PERDER LA DOCUMENTACION :)
 }
 
 .campo label {
-    color: #00ff88;
-    font-weight: bold;
+    color: #111111;
+    font-weight: 700;
 }
 
 .campo input {
     width: 100%;
     max-width: 100%;
     padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #333;
-    background: #222;
-    color: white;
+    border-radius: 12px;
+    border: 1px solid #b9dcec;
+    background: #f8fcff;
+    color: #111111;
     font-size: 16px;
     outline: none;
     box-sizing: border-box;
 }
 
 .campo input:focus {
-    border-color: #00ff88;
-    box-shadow: 0 0 8px rgba(0, 255, 136, 0.3);
+    border-color: #4fa9d8;
+    box-shadow: 0 0 0 3px rgba(79, 169, 216, 0.14);
 }
-
-/* el boton del formulario xd */
 
 .formulario button {
     grid-column: 1 / -1;
     width: 100%;
     padding: 14px;
     border: none;
-    border-radius: 8px;
-    background: #00ff88;
-    color: black;
-    font-weight: bold;
+    border-radius: 12px;
+    background: #4fa9d8;
+    color: #ffffff;
+    font-weight: 700;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
@@ -431,28 +620,25 @@ PARA NO PERDER LA DOCUMENTACION :)
 }
 
 .formulario button:hover {
+    background: #267eaf;
     transform: translateY(-2px);
-    box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+    box-shadow: 0 8px 18px rgba(38, 126, 175, 0.18);
 }
-
-/* resultados */
 
 .resultado {
     display: none;
     margin-top: 30px;
     padding: 20px;
-    border-radius: 10px;
-    background: #181818;
-    border: 1px solid #00ff88;
+    border-radius: 14px;
+    background: #f5fbff;
+    border: 1px solid #cceafa;
     box-sizing: border-box;
 }
 
 .resultado h3 {
-    color: #00ff88;
+    color: #111111;
     margin-bottom: 15px;
 }
-
-/* aqui es para hacer unicamente la tabla responsiva NADA MAS LA TABLA */
 
 .tabla-container {
     width: 100%;
@@ -465,12 +651,12 @@ PARA NO PERDER LA DOCUMENTACION :)
     width: 100%;
     min-width: 650px;
     border-collapse: collapse;
-    background: #181818;
+    background: #ffffff;
 }
 
 #tablaBiseccion th {
-    background: #00ff88;
-    color: black;
+    background: #4fa9d8;
+    color: #ffffff;
     padding: 12px;
     white-space: nowrap;
 }
@@ -478,27 +664,196 @@ PARA NO PERDER LA DOCUMENTACION :)
 #tablaBiseccion td {
     padding: 10px;
     text-align: center;
-    border-bottom: 1px solid #333;
-    color: white;
+    border-bottom: 1px solid #dcecf5;
+    color: #111111;
     white-space: nowrap;
 }
 
 #tablaBiseccion tr:hover {
-    background: #222;
+    background: #eef8fd;
 }
-
-/* msj */
 
 #mensaje {
     margin-top: 20px;
-    color: #ff5555;
+    color: #d86f86;
     text-align: center;
     overflow-wrap: break-word;
 }
 
-/* formato para tablet - betatester_Joan*/
+
+/* Botones de funciones */
+
+.botones-funciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.botones-funciones button {
+    padding: 8px 14px;
+    border: 1px solid #8dc8e7;
+    border-radius: 9px;
+    background: #eef8fd;
+    color: #1677b8;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.botones-funciones button:hover {
+    background: #4fa9d8;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.funcion-campo {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.funcion-campo input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* pie de pagina */
+
+footer {
+    background: linear-gradient(135deg, #dff3ff, #eaf7ff);
+    color: #111111;
+    padding: 45px 0 25px;
+    display: flex;
+    margin-top: auto;
+    border-top: 1px solid #cceafa;
+}
+
+.container-1 {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row-1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+footer h3,
+footer h4,
+footer h5 {
+    color: #111111;
+}
+
+footer p,
+footer li {
+    color: #222222;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.a-1 {
+    color: #1677b8;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.a-1:hover {
+    color: #d86f86 !important;
+}
+
+.redes-sociales {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.red-social {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    color: #ffffff !important;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.red-social i {
+    font-size: 19px;
+}
+
+.facebook {
+    background-color: #4fa9d8;
+    box-shadow: 0 5px 15px rgba(79, 169, 216, 0.25);
+}
+
+.instagram {
+    background-color: #e28c9e;
+    box-shadow: 0 5px 15px rgba(226, 140, 158, 0.25);
+}
+
+.youtube {
+    background-color: #267eaf;
+    box-shadow: 0 5px 15px rgba(38, 126, 175, 0.25);
+}
+
+.red-social:hover {
+    transform: scale(1.1);
+    color: #ffffff !important;
+}
+
+
+/* aca empieza el responsive, este es de tablet */
 
 @media (max-width: 768px) {
+
+    .navbar {
+        margin: 12px 2%;
+        padding: 8px 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 25px;
+        margin-top: 35px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-decoration {
+        width: 100%;
+        height: 180px;
+        margin-top: 20px;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
     .calculadora {
         width: 94%;
         margin: 30px auto;
@@ -520,16 +875,82 @@ PARA NO PERDER LA DOCUMENTACION :)
     .descripcion {
         font-size: 14px;
     }
+
+    .botones-funciones {
+        gap: 6px;
+    }
+
+    .botones-funciones button {
+        flex: 1 1 auto;
+        min-width: 60px;
+    }
+
+    .row-1 {
+        gap: 25px;
+    }
 }
 
-/* pa los celulares - Betatester_Todo el equipo*/
+
+/* responsive de celulares */
 
 @media (max-width: 480px) {
+
+    .navbar-brand img {
+        width: 140px;
+    }
+
+    .hero {
+        width: 94%;
+        padding: 30px 18px;
+        border-radius: 22px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-text > p:not(.hero-subtitle) {
+        font-size: 16px;
+    }
+
+    .hero-button {
+        width: 100%;
+    }
+
+    .hero-decoration {
+        height: 140px;
+    }
+
+    .math-symbol {
+        font-size: 55px;
+    }
+
+    .team-section {
+        width: 94%;
+    }
+
+    .card-1 {
+        flex-basis: 160px;
+        width: 160px;
+        height: 200px;
+    }
+
+    .calculadoras-section,
+    .errores-section {
+        padding: 55px 5%;
+    }
+
+    .calculadora-card,
+    .error-card {
+        width: 100%;
+        max-width: 330px;
+    }
+
     .calculadora {
         width: 95%;
         margin: 20px auto;
         padding: 15px;
-        border-radius: 10px;
+        border-radius: 16px;
     }
 
     .calculadora h2 {
@@ -559,61 +980,11 @@ PARA NO PERDER LA DOCUMENTACION :)
         padding: 8px;
         font-size: 13px;
     }
-}
 
-/* Botones de funciones */
-
-.botones-funciones {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 10px;
-}
-
-.botones-funciones button {
-    padding: 8px 14px;
-    border: 1px solid #00ff88;
-    border-radius: 6px;
-    background: #181818;
-    color: #00ff88;
-    cursor: pointer;
-    font-size: 14px;
-    transition: 0.2s;
-}
-
-.botones-funciones button:hover {
-    background: #00ff88;
-    color: #000;
-    transform: translateY(-2px);
-}
-
-/* Funcion */
-
-.funcion-campo {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.funcion-campo input {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* responsivo */
-@media (max-width: 768px) {
-    .botones-funciones {
-        gap: 6px;
-    }
-
-    .botones-funciones button {
-        flex: 1 1 auto;
-        min-width: 60px;
+    .row-1 {
+        flex-direction: column;
+        gap: 20px;
     }
 }
 
-@media (max-width: 480px) {
-    .botones-funciones button {
-        font-size: 12px;
-        padding: 7px 10px;
-    }
-}
+

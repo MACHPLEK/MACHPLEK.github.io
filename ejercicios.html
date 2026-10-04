@@ -3714,111 +3714,6 @@
     <br>
     <br>
 
-    <!--TABLA BISECCIÓN, LA CALCULADORA EN OTRAS PALABRAS-->
-
-    <section class="calculadora">
-        <h2>Método de Bisección (Cerrado)</h2>
-        <p class="descripcion">
-            Introduce la función y los datos disponibles.
-        </p>
-
-        <!-- Funcion -->
-
-        <div class="campo funcion-campo">
-            <label for="funcion">Función f(x)</label>
-            <input type="text" id="funcion" placeholder="Ejemplo: cos(0.5e^-x)+x^2-2">
-
-            <!-- BOTONES DE FUNCIONES -->
-
-            <div class="botones-funciones">
-                <button type="button" onclick="agregarFuncion('sin(')"> sen </button>
-                <button type="button" onclick="agregarFuncion('cos(')"> cos </button>
-                <button type="button" onclick="agregarFuncion('tan(')"> tan </button>
-                <button type="button" onclick="agregarFuncion('e^x')"> eˣ </button>
-                <button type="button" onclick="agregarFuncion('sqrt(')"> √ </button>
-                <button type="button" onclick="agregarFuncion('ln(')"> ln </button>
-                <button type="button" onclick="agregarFuncion('log(')"> log </button>
-                <button type="button" onclick="agregarFuncion('x^2')"> x² </button>
-            </div>
-        </div>
-
-        <!-- intervalos -->
-
-        <div class="formulario">
-            <div class="campo">
-                <label for="a"> Intervalo a </label>
-                <input type="number" id="a" placeholder="Automático" step="any">
-            </div>
-            <div class="campo">
-                <label for="b"> Intervalo b </label>
-                <input type="number" id="b" placeholder="Automático" step="any">
-            </div>
-
-            <!-- tolerancia -->
-
-            <div class="campo">
-                <label for="tolerancia"> Tolerancia </label>
-                <input type="number" id="tolerancia" placeholder="Predeterminada: 0.01" step="any">
-            </div>
-
-            <!-- iteraciones -->
-
-            <div class="campo">
-                <label for="maxIteraciones"> Máximo de iteraciones </label>
-                <input type="number" id="maxIteraciones" placeholder="Predeterminado: 100" min="1">
-            </div>
-            <button type="button" onclick="calcularBiseccion()"> CALCULAR </button>
-        </div>
-
-        <!-- msj -->
-
-        <div id="mensaje"></div>
-
-        <!-- resultado -->
-
-        <div id="resultado" class="resultado">
-            <h3>Resultado</h3>
-            <p>
-                <strong>Raíz aproximada:</strong>
-                <span id="raiz"></span>
-            </p>
-            <p>
-                <strong>Iteraciones:</strong>
-                <span id="numeroIteraciones"></span>
-            </p>
-            <p>
-                <strong>Intervalo utilizado:</strong>
-                <span id="intervaloUtilizado"></span>
-            </p>
-            <p>
-                <strong>Tolerancia utilizada:</strong>
-                <span id="toleranciaUtilizada"></span>
-            </p>
-        </div>
-
-        <!-- Tabla -->
-
-        <div class="tabla-container">
-            <table id="tablaBiseccion">
-                <thead>
-                    <tr>
-                        <th>Iteración</th>
-                        <th>a</th>
-                        <th>b</th>
-                        <th>Xm</th>
-                        <th>f(Xm)</th>
-                        <th>Error</th>
-                    </tr>
-                </thead>
-                <tbody id="tablaResultados"></tbody>
-            </table>
-        </div>
-    </section>
-    </div>
-
-    <br>
-    <br>
-    <br>
 
     <!--Aqui footer-->
 
@@ -3871,8 +3766,7 @@
 
     <!--js para la funcion de la pagina-->
     <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjs@14/lib/browser/math.js"></script>
-    <script src="script.js"></script>
+
 </body>
 
 </html>
