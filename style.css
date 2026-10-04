@@ -988,3 +988,120 @@ ul li {
 }
 
 
+
+/* =========================================
+   EJERCICIOS BISECCIÓN ABIERTA
+========================================= */
+
+.ejercicios-abiertos {
+    padding: 45px 7%;
+    background: #f4f8ff;
+}
+
+.ejercicios-abiertos .section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.ejercicio-abierto {
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
+    margin: 25px auto;
+    max-width: 1000px;
+    border: 1px solid #c9dcf5;
+    box-shadow: 0 5px 18px rgba(50, 100, 160, 0.10);
+}
+
+.ejercicio-abierto h3 {
+    color: #2865a8;
+    font-weight: bold;
+    border-bottom: 2px solid #f3b5d8;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.ejercicio-abierto h4 {
+    color: #467bb8;
+    margin-top: 25px;
+    font-size: 19px;
+}
+
+.funcion-ejercicio {
+    background: #e4efff;
+    color: #173d70;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.pendiente-tabla {
+    background: #fff0f8;
+    padding: 15px;
+    border-radius: 10px;
+    color: #555;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .ejercicios-abiertos {
+        padding: 30px 15px;
+    }
+
+    .ejercicio-abierto {
+        padding: 20px;
+    }
+
+    .funcion-ejercicio {
+        font-size: 18px;
+        overflow-wrap: anywhere;
+    }
+}
+
+
+
+/* TABLAS DE EJERCICIOS */
+
+.tabla-ejercicio {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.tabla-ejercicio table {
+    width: 100%;
+    min-width: 450px;
+    border-collapse: collapse;
+    text-align: center;
+    background: white;
+}
+
+.tabla-ejercicio th {
+    background: #2865a8;
+    color: white;
+    padding: 14px;
+}
+
+.tabla-ejercicio td {
+    padding: 12px;
+    border: 1px solid #d5e2f2;
+}
+
+.tabla-ejercicio tbody tr:nth-child(even) {
+    background: #edf4ff;
+}
+
+.tabla-ejercicio tbody tr:hover {
+    background: #fff0f8;
+}
+
+.resultado-ejercicio {
+    background: #fff0f8;
+    border-left: 5px solid #e99ac8;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+}

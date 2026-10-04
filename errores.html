@@ -15,6 +15,7 @@
 
 <body>
 
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg" style="background-color: #000000;">
         <div class="container-fluid">
 
@@ -46,37 +47,16 @@
                         </a>
                     </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle"
-                            href="#"
-                            id="navbarDropdownMenuLink"
-                            role="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ejercicios-menu.html">
                             Ejercicios
                         </a>
+                    </li>
 
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-
-                            <li>
-                                <a class="dropdown-item" href="./ejercicios.html">
-                                    Bisección cerrada
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    Bisección abierta
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    Método de Newton
-                                </a>
-                            </li>
-
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html#calculadoras">
+                            Calculadora
+                        </a>
                     </li>
 
                     <li class="nav-item">
@@ -86,7 +66,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="./errores.html">
+                        <a class="nav-link active" aria-current="page" href="./errores.html">
                             Errores
                         </a>
                     </li>
@@ -96,8 +76,9 @@
             </div>
         </div>
     </nav>
- <!--Aca empiezan los errores -->
 
+
+    <!-- SECCIÓN DE ERRORES -->
     <section class="errores-section">
 
         <div class="section-title">
@@ -116,102 +97,120 @@
 
         <div class="errores-container">
 
-    <div class="error-card" onclick="mostrarError(this)">
-    <h3>Error absoluto</h3>
+            <!-- ERROR ABSOLUTO -->
+            <div class="error-card" onclick="mostrarError(this)">
 
-    <div class="error-info">
-        <p>
-            Es la diferencia entre el valor real y el valor aproximado
-            obtenido mediante un método numérico.
-        </p>
+                <h3>Error absoluto</h3>
 
-        <div class="formula">
-            Ea = |Valor real - Valor aproximado|
+                <div class="error-info">
+                    <p>
+                        Es la diferencia entre el valor real y el valor aproximado
+                        obtenido mediante un método numérico.
+                    </p>
+
+                    <div class="formula">
+                        Ea = |Valor real - Valor aproximado|
+                    </div>
+
+                    <p>
+                        Mientras menor sea el error absoluto, más cercana será
+                        la aproximación al valor real.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- ERROR RELATIVO -->
+            <div class="error-card" onclick="mostrarError(this)">
+
+                <h3>Error relativo</h3>
+
+                <div class="error-info">
+                    <p>
+                        Indica qué tan grande es el error en comparación con
+                        el valor real. Permite evaluar la precisión de una aproximación.
+                    </p>
+
+                    <div class="formula">
+                        Er = Ea / |Valor real|
+                    </div>
+
+                    <p>
+                        El error relativo suele expresarse como un número decimal
+                        y puede convertirse a porcentaje.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- ERROR PORCENTUAL -->
+            <div class="error-card" onclick="mostrarError(this)">
+
+                <h3>Error porcentual</h3>
+
+                <div class="error-info">
+                    <p>
+                        Expresa el error relativo como un porcentaje, lo que facilita
+                        interpretar qué tan grande es la diferencia entre el valor
+                        real y el valor aproximado.
+                    </p>
+
+                    <div class="formula">
+                        Er% = Er × 100
+                    </div>
+
+                    <p>
+                        Por ejemplo, un error porcentual de 2% significa que la
+                        aproximación presenta una diferencia del 2% respecto al
+                        valor real.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- ERROR APROXIMADO -->
+            <div class="error-card" onclick="mostrarError(this)">
+
+                <h3>Error aproximado</h3>
+
+                <div class="error-info">
+                    <p>
+                        Se utiliza cuando no conocemos el valor real de la solución.
+                        En su lugar, se comparan dos aproximaciones consecutivas
+                        para saber cuánto ha cambiado el resultado.
+                    </p>
+
+                    <div class="formula">
+                        Ea = |Aproximación actual - Aproximación anterior|
+                    </div>
+
+                    <p>
+                        Si el error aproximado disminuye, significa que las
+                        aproximaciones están convergiendo hacia una solución.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Agregar los siguientes errores -->
+
         </div>
-
-        <p>
-            Mientras menor sea el error absoluto, más cercana será
-            la aproximación al valor real.
-        </p>
-    </div>
-</div>
-
-
-   <div class="error-card" onclick="mostrarError(this)">
-    <h3>Error relativo</h3>
-
-    <div class="error-info">
-        <p>
-            Indica qué tan grande es el error en comparación con
-            el valor real. Permite evaluar la precisión de una aproximación.
-        </p>
-
-        <div class="formula">
-            Er = Ea / |Valor real|
-        </div>
-
-        <p>
-            El error relativo suele expresarse como un número decimal
-            y puede convertirse a porcentaje.
-        </p>
-    </div>
-</div>
-
-
-   <div class="error-card" onclick="mostrarError(this)">
-    <h3>Error porcentual</h3>
-
-    <div class="error-info">
-        <p>
-            Expresa el error relativo como un porcentaje, lo que facilita
-            interpretar qué tan grande es la diferencia entre el valor
-            real y el valor aproximado.
-        </p>
-
-        <div class="formula">
-            Er% = Er × 100
-        </div>
-
-        <p>
-            Por ejemplo, un error porcentual de 2% significa que la
-            aproximación presenta una diferencia del 2% respecto al
-            valor real.
-        </p>
-    </div>
-</div>
-
-
-<div class="error-card" onclick="mostrarError(this)">
-    <h3>Error aproximado</h3>
-
-    <div class="error-info">
-        <p>
-            Se utiliza cuando no conocemos el valor real de la solución.
-            En su lugar, se comparan dos aproximaciones consecutivas
-            para saber cuánto ha cambiado el resultado.
-        </p>
-
-        <div class="formula">
-            Ea = |Aproximación actual - Aproximación anterior|
-        </div>
-
-        <p>
-            Si el error aproximado disminuye, significa que las
-            aproximaciones están convergiendo hacia una solución.
-        </p>
-    </div>
-</div>
-
-<!--agregar los siguientes errores -->
-
 
     </section>
 
 
+    <!-- SCRIPTS -->
     <script src="./js/bootstrap.bundle.min.js"></script>
-    
-    <script> function mostrarError(tarjeta) {tarjeta.classList.toggle("active");   }
-</script>
+
+    <script>
+        function mostrarError(tarjeta) {
+            tarjeta.classList.toggle("active");
+        }
+    </script>
+
 </body>
 
 </html>
