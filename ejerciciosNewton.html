@@ -93,98 +93,82 @@
 
 
 
-<!-- EJERCICIOS DE BISECCIÓN ABIERTA -->
+<!-- EJERCICIOS DE Método de Newton -->
 
 <section class="ejercicios-abiertos">
 
     <div class="section-title">
         <span>MÉTODOS NUMÉRICOS</span>
-        <h2>Ejercicios de Bisección Abierta</h2>
+        <h2>Ejercicios por Método de Newton</h2>
         <p>
-            Aplicación del método de punto fijo para encontrar
+            Aplicación del método de Newton para encontrar
             aproximaciones de raíces.
         </p>
     </div>
 
     <!-- EJERCICIO 1 -->
+<article class="ejercicio-abierto">
+    <h3>Ejercicio 1</h3>
 
-    <article class="ejercicio-abierto">
-        <h3>Ejercicio 1</h3>
+    <p>
+        Aplicar el método de Newton para establecer
+        una aproximación de la raíz de:
+    </p>
 
-        <p>
-            Aplicar el método de punto fijo para establecer
-            una aproximación de la raíz de:
-        </p>
+    <div class="funcion-ejercicio">
+        f(x) = e^(-x) - x
+    </div>
 
-        <div class="funcion-ejercicio">
-            f(x) = 2e^(x²) - 5x
-        </div>
+    <p><strong>Valor inicial:</strong> x<sub>0</sub> = 0</p>
+    <p><strong>Error:</strong> E = 0.01</p>
 
-        <p><strong>Valor inicial:</strong> x₀ = 0</p>
-        <p><strong>Error:</strong> εₐ = 0.01</p>
+    <h4>Fórmula / Derivada</h4>
+    <p>f'(x) = - (1 + e<sup>x</sup>) / e<sup>x</sup></p>
 
-        <h4>Despejes</h4>
-        <p>g₁(x) = (2e^(x²))/5</p>
-
-        <h4>Tabla de iteraciones</h4>
-        
-<div class="tabla-ejercicio">
-    <table>
+    <h4>Tabla de iteraciones</h4>
+    <table class="table table-bordered">
         <thead>
             <tr>
                 <th>n</th>
-                <th>x</th>
-                <th>g₁(x)</th>
-                <th>f(x)</th>
+                <th>x<sub>n</sub></th>
+                <th>f(x<sub>n</sub>)</th>
             </tr>
         </thead>
-
         <tbody>
             <tr>
-                <td>0</td>
-                <td>0</td>
-                <td>0.4</td>
                 <td>1</td>
+                <td>0.5</td>
+                <td>0.1065</td>
             </tr>
-
-            <tr>
-                <td>1</td>
-                <td>0.4</td>
-                <td>0.4694</td>
-                <td>0.1478</td>
-            </tr>
-
             <tr>
                 <td>2</td>
-                <td>0.4694</td>
-                <td>0.4985</td>
-                <td>0.058</td>
+                <td>0.5663</td>
+                <td>1.3217 × 10<sup>-3</sup></td>
             </tr>
-
             <tr>
                 <td>3</td>
-                <td>0.4985</td>
-                <td>0.5128</td>
-                <td>0.0278</td>
+                <td>0.5671</td>
+                <td>6.7842 × 10<sup>-5</sup></td>
             </tr>
-
             <tr>
                 <td>4</td>
-                <td>0.5128</td>
-                <td>0.5203</td>
-                <td>0.014</td>
+                <td>0.56714</td>
+                <td>5.1565 × 10<sup>-6</sup></td>
             </tr>
         </tbody>
     </table>
-</div>
-
-<div class="resultado-ejercicio">
+    <div class="resultado-ejercicio">
     <strong>Conclusión:</strong>
     La aproximación obtenida en la última iteración
     es x ≈ 0.5203.
 </div>
 
-    </article>
+    <!-- Gráfica del ejercicio -->
+    <div class="grafica-ejercicio text-center my-3">
+        <h4>Gráfica de la función:</h4>
+        <img src="graficasNewton/grafica1.jpeg" alt="Gráfica de f(x) = e^-x - x" class="img-fluid rounded border">
+    </div>
+</article>
 
 </section>
 
