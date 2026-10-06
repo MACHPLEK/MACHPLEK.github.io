@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora - Método de Newton</title>
+
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/edc6a50afa.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #000000;">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="./index.html">
+                <img src="./imagenes/Los_Telekirkies.png" alt="Los Telekirkies" width="200" height="70">
+            </a>
+
+            <!-- Botón del menú -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ejercicios-menu.html">
+                            Ejercicios
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html#calculadoras">
+                            Calculadora
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./datosCuriosos.html">
+                            Datos curiosos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./errores.html">
+                            Errores
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="redes-sociales">
+
+            <a href="https://www.facebook.com/share/19FYYNyHim/"
+                class="red-social facebook" target="_blank">
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+            </a>
+
+            <a href="https://www.instagram.com/numerica.exe?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                class="red-social instagram" target="_blank">
+
+                <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+            <a href="#" class="red-social youtube" target="_blank">
+
+                <i class="fa-brands fa-youtube"></i>
+
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <br>
+    <br>
+
+
+    <!-- Calculadora del método de Newton -->
+
+    <section class="calculadora">
+
+        <h2>Método de Newton</h2>
+
+        <p class="descripcion">
+            Introduce una función, un valor inicial y los parámetros de
+            aproximación para encontrar una raíz utilizando el método de Newton.
+        </p>
+
+
+        <!-- Función -->
+
+        <div class="campo funcion-campo">
+
+            <label for="funcion">
+                Función f(x)
+            </label>
+
+            <input type="text"
+                id="funcion"
+                placeholder="Ejemplo: x^3 - 2*x - 5">
+
+
+            <!-- Botones de funciones -->
+
+            <div class="botones-funciones">
+
+                <button type="button"
+                    onclick="agregarTexto('funcion', 'sin(')">
+                    sen
+                </button>
+
+                <button type="button"
+                    onclick="agregarTexto('funcion', 'cos(')">
+                    cos
+                </button>
+
+                <button type="button"
+                    onclick="agregarTexto('funcion', 'tan(')">
+                    tan
+                </button>
+
+                <button type="button"
+                    onclick="agregarTexto('funcion', 'e^x')">
+                    eˣ
+                </button>
+
+                <button type="button"
+                    onclick="agregarTexto('funcion', 'sqrt(')">
+                    √
+                </button>
+
+                <button type="button"
+                    onclick="agregarTexto('funcion', 'ln(')">
+                    ln
+                </button>
+
+                <button type="button"
+                    onclick="agregarTexto('funcion', 'log(')">
+                    log
+                </button>
+
+                <button type="button"
+                    onclick="agregarTexto('funcion', 'x^2')">
+                    x²
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Datos -->
+
+        <div class="formulario">
+
+            <div class="campo">
+
+                <label for="x0">
+                    Valor inicial (x₀)
+                </label>
+
+                <input type="number"
+                    id="x0"
+                    placeholder="Ejemplo: 2"
+                    step="any">
+
+            </div>
+
+            <div class="campo">
+
+                <label for="tolerancia">
+                    Tolerancia (%)
+                </label>
+
+                <input type="number"
+                    id="tolerancia"
+                    placeholder="Predeterminada: 0.01"
+                    step="any">
+
+            </div>
+
+            <div class="campo">
+
+                <label for="maxIteraciones">
+                    Máximo de iteraciones
+                </label>
+
+                <input type="number"
+                    id="maxIteraciones"
+                    placeholder="Predeterminado: 100"
+                    min="1">
+
+            </div>
+
+            <button type="button"
+                onclick="calcularNewton()">
+
+                CALCULAR
+
+            </button>
+
+        </div>
+
+
+        <!-- Mensaje -->
+
+        <div id="mensaje"></div>
+
+
+        <!-- Resultado -->
+
+        <div id="resultado"
+            class="resultado"
+            style="display: none;">
+
+            <h3>Resultado</h3>
+
+            <p>
+                <strong>Estado:</strong>
+                <span id="estadoConvergencia"></span>
+            </p>
+
+            <p>
+                <strong>Raíz aproximada (x):</strong>
+                <span id="raiz"></span>
+            </p>
+
+            <p>
+                <strong>Iteraciones:</strong>
+                <span id="numeroIteraciones"></span>
+            </p>
+
+            <p>
+                <strong>Error final:</strong>
+                <span id="errorFinal"></span>
+            </p>
+
+        </div>
+
+
+        <!-- Tabla -->
+
+        <div class="tabla-container">
+
+            <table id="tablaNewton">
+
+                <thead>
+
+                    <tr>
+                        <th>n</th>
+                        <th>xₙ</th>
+                        <th>f(xₙ)</th>
+                        <th>f'(xₙ)</th>
+                        <th>xₙ₊₁</th>
+                        <th>Error (%)</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="tablaResultados"></tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <br>
+    <br>
+    <br>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="container container-1">
+
+            <div class="row row-1">
+
+                <div class="col">
+
+                    <h3>Links</h3>
+
+                    <ul>
+
+                        <li>
+                            <a class="a-1" href="./index.html">
+                                Inicio
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="a-1" href="./ejercicios-menu.html">
+                                Ejercicios
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="a-1" href="./index.html#calculadoras">
+                                Calculadora
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="a-1" href="./datosCuriosos.html">
+                                Datos Curiosos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="a-1" href="./errores.html">
+                                Errores
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="col">
+
+                    <h3>Contacto</h3>
+
+                    <p>
+                        Dirección: UNAM FES ARAGÓN.
+                    </p>
+
+                    <p>
+                        Carrera: Ingenieria en Computación
+                    </p>
+
+                    <p>
+                        Correo electronico: skibidi67@gmail.com
+                    </p>
+
+                </div>
+
+
+                <div class="col">
+
+                    <h3>Participantes del equipo</h3>
+
+                    <p>
+                        Aguilera Villavicencio Hayat
+                    </p>
+
+                    <p>
+                        Cervantes Márquez Joan Antonio
+                    </p>
+
+                    <p>
+                        Casarrubias Peñaloza Valeria Guadalupe
+                    </p>
+
+                    <p>
+                        Espinosa Rojas Jonatan Mateo
+                    </p>
+
+                    <p>
+                        Garduño Muñoa Allison Daniela
+                    </p>
+
+                    <p>
+                        Luque Mendoza David
+                    </p>
+
+                    <p>
+                        Zamora Tierrablanca Saúl Isai
+                    </p>
+
+                </div>
+
+
+                <!-- Redes sociales -->
+
+                <div class="redes-sociales">
+
+                    <a href="https://www.facebook.com/share/19FYYNyHim/"
+                        class="red-social facebook"
+                        target="_blank">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+                    <a href="https://www.instagram.com/numerica.exe?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                        class="red-social instagram"
+                        target="_blank">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <a href="#"
+                        class="red-social youtube"
+                        target="_blank">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@14/lib/browser/math.js"></script>
+    <script src="scriptNewton.js"></script>
+
+</body>
+
+</html>

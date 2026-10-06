@@ -542,7 +542,7 @@ nav {
 }
 
 
-/*   Calculadora-bisección.html   */
+/*  Calculadora bisección  */
 
 .calculadora {
     width: 90%;
@@ -989,9 +989,7 @@ ul li {
 
 
 
-/* =========================================
-   EJERCICIOS BISECCIÓN ABIERTA
-========================================= */
+/* para bisseccion abierta */
 
 .ejercicios-abiertos {
     padding: 45px 7%;
@@ -1063,7 +1061,7 @@ ul li {
 
 
 
-/* TABLAS DE EJERCICIOS */
+/* tablas de biseccion abierta */
 
 .tabla-ejercicio {
     width: 100%;
@@ -1104,4 +1102,29 @@ ul li {
     padding: 15px;
     margin-top: 20px;
     border-radius: 8px;
+}
+
+
+/* esto es para la calculadora de newton */
+#tablaNewton {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#tablaNewton th,
+#tablaNewton td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+#tablaNewton th {
+    font-weight: bold;
+}
+
+.tabla-container {
+    width: 100%;
+    overflow-x: auto;
 }
