@@ -995,6 +995,206 @@
 
 </section>
 
+<!-- EJERCICIO 16 -->
+<article class="ejercicio-abierto" id="ejercicio-16">
+
+    <h3>Ejercicio 16: Método de Newton-Raphson</h3>
+
+    <p>
+        Encontrar una raíz en cada intervalo:
+        0 &lt; x &lt; 1 y 3 &lt; x &lt; 5,
+        utilizando el método de Newton-Raphson.
+    </p>
+
+    <div class="funcion-ejercicio">
+        f(x) = e<sup>x</sup> - 3x<sup>2</sup> = 0
+    </div>
+
+    <h4>Derivada y fórmula de iteración</h4>
+
+    <p>
+        f'(x) = e<sup>x</sup> - 6x
+    </p>
+
+    <div class="funcion-ejercicio">
+        x<sub>n+1</sub> = x<sub>n</sub> -
+        [ (e<sup>x<sub>n</sub></sup> - 3x<sub>n</sub><sup>2</sup>)
+        / (e<sup>x<sub>n</sub></sup> - 6x<sub>n</sub>) ]
+    </div>
+
+    <h4>A) Raíz en el intervalo 0 &lt; x &lt; 1</h4>
+
+    <p>
+        f(0) = e<sup>0</sup> - 3(0)<sup>2</sup> = 1.
+        <br>
+        f(1) = e<sup>1</sup> - 3(1)<sup>2</sup> ≈ -0.2817.
+    </p>
+
+    <p>
+        Como la función es continua y los valores tienen signos
+        opuestos, existe al menos una raíz en el intervalo (0, 1).
+    </p>
+
+    <p><strong>Valor inicial:</strong> x<sub>0</sub> = 0.5.</p>
+
+    <div class="tabla-ejercicio">
+        <table>
+            <thead>
+                <tr>
+                    <th>n</th>
+                    <th>x<sub>n</sub></th>
+                    <th>x<sub>n+1</sub></th>
+                    <th>|x<sub>n+1</sub> - x<sub>n</sub>|</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>0.500000000</td>
+                    <td>1.165089482</td>
+                    <td>0.665089482</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1.165089482</td>
+                    <td>0.936226938</td>
+                    <td>0.228862545</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>0.936226938</td>
+                    <td>0.910396665</td>
+                    <td>0.025830273</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>0.910396665</td>
+                    <td>0.910007662</td>
+                    <td>0.000389003</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>0.910007662</td>
+                    <td>0.910007572</td>
+                    <td>8.937441 × 10<sup>-8</sup></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="resultado-ejercicio">
+        <strong>Resultado A):</strong>
+        Después de 5 iteraciones, la raíz aproximada es
+        x ≈ 0.91000757.
+    </div>
+
+    <h4>B) Raíz en el intervalo 3 &lt; x &lt; 5</h4>
+
+    <p>
+        f(3) = e<sup>3</sup> - 27 ≈ -6.9145.
+        <br>
+        f(5) = e<sup>5</sup> - 75 ≈ 73.4132.
+    </p>
+
+    <p>
+        Como la función es continua y los valores tienen signos
+        opuestos, existe al menos una raíz en el intervalo (3, 5).
+    </p>
+
+    <p><strong>Valor inicial:</strong> x<sub>0</sub> = 3.5.</p>
+
+    <div class="tabla-ejercicio">
+        <table>
+            <thead>
+                <tr>
+                    <th>n</th>
+                    <th>x<sub>n</sub></th>
+                    <th>x<sub>n+1</sub></th>
+                    <th>|x<sub>n+1</sub> - x<sub>n</sub>|</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>3.500000000</td>
+                    <td>3.799992774</td>
+                    <td>0.299992774</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>3.799992774</td>
+                    <td>3.736934821</td>
+                    <td>0.063057953</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3.736934821</td>
+                    <td>3.733092687</td>
+                    <td>0.003842134</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>3.733092687</td>
+                    <td>3.733079029</td>
+                    <td>0.000013658</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>3.733079029</td>
+                    <td>3.733079029</td>
+                    <td>1.720681 × 10<sup>-10</sup></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="resultado-ejercicio">
+        <strong>Resultado B):</strong>
+        Después de 5 iteraciones, la raíz aproximada es
+        x ≈ 3.73307903.
+    </div>
+
+    <h4>C) Justificación de los valores iniciales</h4>
+
+    <p>
+        Se seleccionan x<sub>0</sub> = 0.5 y
+        x<sub>0</sub> = 3.5 como puntos de partida dentro de
+        sus respectivos intervalos. En ambos puntos, la derivada
+        es distinta de cero y permite aplicar la fórmula.
+        Las iteraciones muestran la convergencia hacia las raíces.
+    </p>
+
+    <p>
+        El cambio de signo demuestra la existencia de una raíz,
+        pero por sí solo no garantiza la convergencia de Newton.
+        Este método puede generar aproximaciones fuera del intervalo,
+        como ocurre en la primera iteración del inciso A).
+    </p>
+
+    <h4>D) Criterio de paro</h4>
+
+    <div class="funcion-ejercicio">
+        |x<sub>n+1</sub> - x<sub>n</sub>| &lt;
+        10<sup>-5</sup> = 0.00001
+    </div>
+
+    <p>
+        El procedimiento termina cuando la diferencia absoluta entre
+        dos aproximaciones consecutivas es menor que 0.00001.
+        Los cálculos se realizan sin redondear los valores intermedios;
+        las tablas muestran valores redondeados.
+    </p>
+
+    <div class="resultado-ejercicio">
+        <strong>Conclusión:</strong>
+        Las raíces aproximadas en los intervalos solicitados son
+        x ≈ 0.91000757 en (0, 1) y
+        x ≈ 3.73307903 en (3, 5).
+        En ambos casos se cumple el criterio de paro.
+    </div>
+
+</article>
+
     <br>
 
     <!--Aqui footer-->
