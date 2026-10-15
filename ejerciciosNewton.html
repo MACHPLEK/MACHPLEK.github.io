@@ -898,6 +898,101 @@
     </div>
 </article>
 
+<!-- PROBLEMA 4 -->
+<article class="ejercicio-abierto">
+    <h3>Problema 4</h3>
+
+    <p>
+        El volumen de líquido contenido en un tanque esférico está dado por:
+    </p>
+
+    <div class="funcion-ejercicio">
+        V = <sup>πh<sup>2</sup></sup>⁄<sub>3</sub> (3R - h)
+    </div>
+
+    <p>
+        Donde: <br>
+        V = Volumen del líquido, &nbsp;&nbsp; h = Profundidad del líquido, &nbsp;&nbsp; R = Radio del tanque. <br>
+        Un tanque tiene: V = 30 m<sup>3</sup>, &nbsp;&nbsp; R = 300 cm (= 3 m).
+    </p>
+
+    <!-- INCISO A -->
+    <div class="inciso-ejercicio my-4">
+        <h4>a) Fórmula de la ecuación</h4>
+        <p>
+            f(h) = 0 &rarr; Sustituyendo V y R: <br>
+            30 = <sup>&pi;h<sup>2</sup></sup>⁄<sub>3</sub> (3(3) - h) &rArr; 30 = <sup>&pi;h<sup>2</sup></sup>⁄<sub>3</sub> (9 - h) <br>
+            f(h) = <sup>&pi;h<sup>2</sup></sup>⁄<sub>3</sub> (9 - h) - 30 = 0 &rArr; 3&pi;h<sup>2</sup> - &pi;h<sup>3</sup> - 90 = 0
+        </p>
+    </div>
+
+    <!-- INCISO B -->
+    <div class="inciso-ejercicio my-4">
+        <h4>b) Obtenga f'(h)</h4>
+        <p>
+            f'(h) = <sup>d</sup>⁄<sub>dh</sub> [ <sup>&pi;</sup>⁄<sub>3</sub> (9h<sup>2</sup> - h<sup>3</sup>) - 30 ] <br>
+            f'(h) = <sup>&pi;</sup>⁄<sub>3</sub> (18h - 3h<sup>2</sup>) = &pi;(6h - h<sup>2</sup>)
+        </p>
+    </div>
+
+    <!-- INCISO C y D -->
+    <div class="inciso-ejercicio my-4">
+        <h4>c) y d) Aplicar Newton-Raphson (Valor inicial: h<sub>0</sub> = 2.5 m, detenerse con E<sub>a</sub> &lt; 0.001%)</h4>
+        
+        <p>
+            h<sub>n+1</sub> = h<sub>n</sub> - [ (<sup>&pi;h<sup>2</sup></sup>⁄<sub>3</sub> (9 - h) - 30) / (&pi;(6h - h<sup>2</sup>)) ]
+        </p>
+
+        <table class="tabla-ejercicio">
+            <thead>
+                <tr>
+                    <th>h<sub>n</sub></th>
+                    <th>Nuevo h<sub>n</sub></th>
+                    <th>E<sub>a</sub> (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2.5</td>
+                    <td>2.043693</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>2.043693</td>
+                    <td>1.944088</td>
+                    <td>5.1235%</td>
+                </tr>
+                <tr>
+                    <td>1.944088</td>
+                    <td>1.936665</td>
+                    <td>0.3833%</td>
+                </tr>
+                <tr>
+                    <td>1.936665</td>
+                    <td>1.936676</td>
+                    <td>0.0025%</td>
+                </tr>
+                <tr>
+                    <td>1.936676</td>
+                    <td>1.936676</td>
+                    <td>0.0000002%</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="resultado-ejercicio">
+            <strong>Conclusión c) y d):</strong>
+            Como E<sub>a</sub> = 0.0000002% &lt; 0.001%, la profundidad del líquido es h ≈ 1.9366 m.
+        </div>
+    </div>
+<!-- Gráfica del ejercicio -->
+    <div class="grafica-ejercicio text-center my-3">
+        <h4>Gráfica de la función</h4>
+        <img src="graficasNewton/problema14lololol.jpeg" alt="Gráfica del problema 14" class="img-fluid">
+    </div>
+</article>
+
+
 </section>
 
     <br>
