@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+
+    <!--Iconos super prime-->
+    <script src="https://kit.fontawesome.com/edc6a50afa.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!--Empieza el Navbar, no mover de lugar-->
+    <nav class="navbar navbar-expand-lg" style="background-color: #000000;">
+        <div class="container-fluid">
+
+            <!--Nombre del equipo-->
+            <a class="navbar-brand" href="./index.html">
+                <img src="./imagenes/Los_Telekirkies.png" alt="Los Telekirkies" width="200" height="70">
+            </a>
+
+            <!--botones-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                <!--lista de los botones-->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./ejercicios-menu.html">Ejercicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html#calculadoras">Calculadora</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./datosCuriosos.html">Datos curiosos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./errores.html">Errores</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/share/19FYYNyHim/" class="red-social facebook" target="_blank">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/numerica.exe?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                class="red-social instagram" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" class="red-social youtube" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+
+    <!--Inician los ejercicios-->
+    <div class="container-fluid">
+
+        <!-- SECCIÓN: MÉTODOS DE TAYLOR (EJERCICIOS DE LAS IMÁGENES) -->
+        <section class="ejercicios-abiertos">
+
+            <div class="section-title">
+                <span>MÉTODOS NUMÉRICOS</span>
+                <h2>Ejercicios por Método de Taylor</h2>
+                <p>
+                    Aplicación del polinomio de Taylor para encontrar aproximaciones de funciones.
+                </p>
+            </div>
+
+            <!-- TAYLOR EJERCICIO 1 -->
+            <article class="ejercicio-abierto">
+                <h3>Ejercicio 1</h3>
+                <p>
+                    Utilizando el polinomio de tercer orden, centrado en a = 1, para aproximar:
+                </p>
+                <div class="funcion-ejercicio">
+                    f(x) = e<sup>1.2</sup>
+                </div>
+                <p><strong>Polinomio de tercer orden (a = 1):</strong></p>
+                <p>P<sub>3</sub>(x) = f(1) + f'(1)(x - 1) + [f''(1) / 2!](x - 1)<sup>2</sup> + [f'''(1) / 3!](x - 1)<sup>3</sup></p>
+
+                <h4>Tabla de iteraciones / Cálculos</h4>
+                <table class="tabla-ejercicio">
+                    <thead>
+                        <tr>
+                            <th>Orden (n)</th>
+                            <th>Término</th>
+                            <th>Valor Parcial</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>e</td>
+                            <td>2.718281828</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>e(0.2)</td>
+                            <td>0.543656365</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>[e / 2](0.2)<sup>2</sup></td>
+                            <td>0.054365636</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>[e / 6](0.2)<sup>3</sup></td>
+                            <td>0.003624375</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="resultado-ejercicio">
+                    <strong>Resultado / Conclusión:</strong>
+                    La aproximación obtenida es e<sup>1.2</sup> ≈ 3.3216 (con 4 decimales).
+                </div>
+                <div class="grafica-ejercicio text-center my-3">
+                    <h4>Gráfica de la función:</h4>
+                    <img src="#" alt="Gráfica de Taylor Ejercicio 1" class="img-fluid rounded border">
+                </div>
+            </article>
+
+            <!-- TAYLOR EJERCICIO 2 -->
+            <article class="ejercicio-abierto">
+                <h3>Ejercicio 2</h3>
+                <p>
+                    Sustituir x = 1.2 para aproximar ln(1.5) y calcular el error porcentual mediante Newton-Raphson:
+                </p>
+                <div class="funcion-ejercicio">
+                    f(x) = e<sup>x</sup> - x, &nbsp;&nbsp;&nbsp; f'(x) = e<sup>x</sup> - 1
+                </div>
+                <p><strong>Valor inicial:</strong> x<sub>0</sub> = 1.200000</p>
+
+                <h4>Tabla de iteraciones</h4>
+                <table class="tabla-ejercicio">
+                    <thead>
+                        <tr>
+                            <th>n</th>
+                            <th>x<sub>n</sub></th>
+                            <th>f(x<sub>n</sub>)</th>
+                            <th>f'(x<sub>n</sub>)</th>
+                            <th>x<sub>n+1</sub></th>
+                            <th>Error %</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>1.200000</td>
+                            <td>2.12012</td>
+                            <td>2.32012</td>
+                            <td>0.28634</td>
+                            <td>317.18%</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0.28634</td>
+                            <td>-0.04113</td>
+                            <td>0.33041</td>
+                            <td>0.41060</td>
+                            <td>30.27%</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>0.41060</td>
+                            <td>-0.00643</td>
+                            <td>0.50692</td>
+                            <td>0.42343</td>
+                            <td>2.89%</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>0.42343</td>
+                            <td>-0.00021</td>
+                            <td>0.52837</td>
+                            <td>0.42382</td>
+                            <td>0.09%</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>0.42382</td>
+                            <td>-0.0000007</td>
+                            <td>0.52886</td>
+                            <td>0.42382</td>
+                            <td>0.0003%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="resultado-ejercicio">
+                    <strong>Resultado:</strong>
+                    ln(1.5) ≈ 0.42382 con un error porcentual de ≈ 0.0003%.
+                </div>
+                <div class="grafica-ejercicio text-center my-3">
+                    <h4>Gráfica de la función:</h4>
+                    <img src="#" alt="Gráfica ln(1.5)" class="img-fluid">
+                </div>
+            </article>
+
+            <!-- TAYLOR EJERCICIO 3 -->
+            <article class="ejercicio-abierto">
+                <h3>Ejercicio 3</h3>
+                <p>
+                    Quinto grado centrado en a = 7&pi; / 4, para aproximar Sin(7&pi; / 3).
+                </p>
+                <div class="funcion-ejercicio">
+                    f(x) = Sin(x) - 0.8660
+                </div>
+                <p><strong>Intervalo inicial:</strong> [1.047, 1.048] (alrededor de &pi; / 3)</p>
+
+                <h4>Tabla de iteraciones (Método de bisección)</h4>
+                <table class="tabla-ejercicio">
+                    <thead>
+                        <tr>
+                            <th>n</th>
+                            <th>a<sub>n</sub> (rad)</th>
+                            <th>b<sub>n</sub> (rad)</th>
+                            <th>c<sub>n</sub> (rad)</th>
+                            <th>f(c<sub>n</sub>)</th>
+                            <th>Error</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>1.0470</td>
+                            <td>1.0480</td>
+                            <td>1.0475</td>
+                            <td>-0.00010</td>
+                            <td>0.0005</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>1.0475</td>
+                            <td>1.0480</td>
+                            <td>1.04775</td>
+                            <td>0.00015</td>
+                            <td>0.00025</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>1.0475</td>
+                            <td>1.04775</td>
+                            <td>1.047625</td>
+                            <td>0.000025</td>
+                            <td>0.000125</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>1.0475</td>
+                            <td>1.047625</td>
+                            <td>1.0475625</td>
+                            <td>-0.0000375</td>
+                            <td>0.0000625</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>1.0475625</td>
+                            <td>1.047625</td>
+                            <td>1.04759375</td>
+                            <td>-0.00000625</td>
+                            <td>0.00003125</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>1.04759375</td>
+                            <td>1.047625</td>
+                            <td>1.047609375</td>
+                            <td>0.000009375</td>
+                            <td>0.000015625</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="resultado-ejercicio">
+                    <strong>Resultado:</strong>
+                    Sin(7&pi; / 3) ≈ 0.8660 (con 6 iteraciones, error ≈ 0.00149%).
+                </div>
+                <div class="grafica-ejercicio text-center my-3">
+                    <h4>Gráfica de la función:</h4>
+                    <img src="#" alt="Gráfica Sin(7pi/3)" class="img-fluid">
+                </div>
+            </article>
+
+            <!-- TAYLOR EJERCICIO 5 (Cuarto grado, f(x) = 1/x) -->
+            <article class="ejercicio-abierto">
+                <h3>Ejercicio 5</h3>
+                <p>
+                    Utilizando una función de cuarto grado centrada en a = 2 para aproximar:
+                </p>
+                <div class="funcion-ejercicio">
+                    f(x) = 1 / x, &nbsp;&nbsp; para aproximar f(2.4) = 1 / 2.4
+                </div>
+                <p><strong>Fórmula general del polinomio de Taylor (Grado 4):</strong></p>
+                <p>P<sub>4</sub>(x) = f(2) + f'(2)(x - 2) + [f''(2) / 2!](x - 2)<sup>2</sup> + [f'''(2) / 3!](x - 2)<sup>3</sup> + [f<sup>(4)</sup>(2) / 4!](x - 2)<sup>4</sup></p>
+
+                <h4>Derivadas y evaluación en a = 2</h4>
+                <table class="tabla-ejercicio">
+                    <thead>
+                        <tr>
+                            <th>Orden</th>
+                            <th>Derivada f<sup>(n)</sup>(x)</th>
+                            <th>Evaluación f<sup>(n)</sup>(2)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>1 / x</td>
+                            <td>1 / 2 = 0.5</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>-1 / x<sup>2</sup></td>
+                            <td>-1 / 4 = -0.25</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2 / x<sup>3</sup></td>
+                            <td>2 / 8 = 0.25</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>-6 / x<sup>4</sup></td>
+                            <td>-6 / 16 = -0.375</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>24 / x<sup>5</sup></td>
+                            <td>24 / 32 = 0.75</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>Sustitución en x = 2.4 (donde x - 2 = 0.4)</h4>
+                <p>P<sub>4</sub>(2.4) = 0.5 - 0.25(0.4) + 0.125(0.4)<sup>2</sup> - 0.0625(0.4)<sup>3</sup> + 0.03125(0.4)<sup>4</sup></p>
+                <p>P<sub>4</sub>(2.4) = 0.5 - 0.1 + 0.02 - 0.004 + 0.0008 = 0.4168</p>
+                <div class="resultado-ejercicio">
+                    <strong>Resultado / Conclusión:</strong>
+                    P<sub>4</sub>(2.4) = 0.4168 con un error aproximado E<sub>a</sub> ≈ 0.4667.
+                </div>
+                <div class="grafica-ejercicio text-center my-3">
+                    <h4>Gráfica de la función:</h4>
+                    <img src="#" alt="Gráfica Taylor Ejercicio 5" class="img-fluid rounded border">
+                </div>
+            </article>
+
+            <!-- TAYLOR EJERCICIO 6 (Cuarto grado, f(x) = ln(x+1)) -->
+            <article class="ejercicio-abierto">
+                <h3>Ejercicio 6</h3>
+                <p>
+                    Aproximación de cuarto grado centrada en a = 1 para evaluar:
+                </p>
+                <div class="funcion-ejercicio">
+                    f(x) = ln(x + 1), &nbsp;&nbsp; para aproximar ln(2.5)
+                </div>
+                <p><strong>Desarrollo de derivadas evaluadas en a = 1:</strong></p>
+                <ul>
+                    <li>f(1) = ln(2)</li>
+                    <li>f'(1) = 1 / 2</li>
+                    <li>f''(1) = -1 / 4</li>
+                    <li>f'''(1) = 1 / 4</li>
+                    <li>f<sup>(4)</sup>(1) = -3 / 8</li>
+                </ul>
+                <h4>Sustitución para x = 1.5 (con x - 1 = 0.5)</h4>
+                <p>P<sub>4</sub>(1.5) = ln(2) + (1/2)(0.5) - (1/4 / 2!)(0.5)<sup>2</sup> + (1/4 / 3!)(0.5)<sup>3</sup> - (3/8 / 4!)(0.5)<sup>4</sup></p>
+                <div class="resultado-ejercicio">
+                    <strong>Resultado / Conclusión:</strong>
+                    ln(2.5) ≈ 0.96128 con error E<sub>a</sub> ≈ 0.96128.
+                </div>
+                <div class="grafica-ejercicio text-center my-3">
+                    <h4>Gráfica de la función:</h4>
+                    <img src="#" alt="Gráfica Taylor Ejercicio 6" class="img-fluid rounded border">
+                </div>
+            </article>
+
+            <!-- TAYLOR EJERCICIO 7 (Cuarto grado, f(x) = e^x) -->
+            <article class="ejercicio-abierto">
+                <h3>Ejercicio 7</h3>
+                <p>
+                    Polinomio de cuarto grado centrado en a = 1 para aproximar una función exponencial:
+                </p>
+                <div class="funcion-ejercicio">
+                    f(x) = e<sup>x</sup>, &nbsp;&nbsp; aproximando para x = 1.1
+                </div>
+                <p><strong>Cálculo de términos y sustitución:</strong></p>
+                <p>P<sub>4</sub>(1.1) = e [ 1 + 2(0.1) + 3(0.1)<sup>2</sup> + (10/3)(0.1)<sup>3</sup> + (14/6)(0.1)<sup>4</sup> ]</p>
+                <p>P<sub>4</sub>(1.1) = e [ 1 + 0.2 + 0.03 + 0.003333 + 0.000317 ] = e(1.2336) ≈ 3.3534</p>
+                <div class="resultado-ejercicio">
+                    <strong>Resultado / Conclusión:</strong>
+                    El valor aproximado es e<sup>1.1</sup> ≈ 3.3534 con un error relativo E<sub>r</sub> ≈ 0.00227.
+                </div>
+                <div class="grafica-ejercicio text-center my-3">
+                    <h4>Gráfica de la función:</h4>
+                    <img src="#" alt="Gráfica Taylor Ejercicio 7" class="img-fluid rounded border">
+                </div>
+            </article>
+
+        </section>
+    </div>
+
+    <br>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container container-1">
+            <div class="row row-1">
+                <div class="col">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a class="a-1" href="./index.html">Inicio</a></li>
+                        <li><a class="a-1" href="./ejercicios.html">Ejercicios</a></li>
+                        <li><a class="a-1" href="#">Redes Sociales</a></li>
+                        <li><a class="a-1" href="./datosCuriosos.html">Datos Curiosos</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Contacto</h3>
+                    <p>Dirección: UNAM FES ARAGÓN.</p>
+                    <p>Carrera: Ingeniería en Computación</p>
+                    <p>Correo electrónico: telekirkies@gmail.com</p>
+                </div>
+                <div class="col">
+                    <h3>Participantes del equipo</h3>
+                    <p>Aguilera Villavicencio Hayat</p>
+                    <p>Cervantes Márquez Joan Antonio</p>
+                    <p>Casarrubias Peñaloza Valeria Guadalupe</p>
+                    <p>Espinosa Rojas Jonatan Mateo</p>
+                    <p>Garduño Muñoa Allison Daniela</p>
+                    <p>Luque Mendoza David</p>
+                    <p>Zamora Tierrablanca Saúl Isai</p>
+                </div>
+
+                <!--Redes sociales-->
+                <div class="redes-sociales">
+                    <a href="https://www.facebook.com/share/19FYYNyHim/" class="red-social facebook" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/numerica.exe?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                        class="red-social instagram" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="red-social youtube" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--js para la funcion de la pagina-->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
