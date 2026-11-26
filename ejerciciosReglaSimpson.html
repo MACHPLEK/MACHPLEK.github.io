@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang ="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+
+    <!--Iconos super prime-->
+    <script src="https://kit.fontawesome.com/edc6a50afa.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!--Empieza el Navbar, no mover de lugar-->
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #000000;">
+        <div class="container-fluid">
+
+            <!--Nombre del equipo-->
+            <a class="navbar-brand" href="./index.html">
+                <img src="./imagenes/Los_Telekirkies.png" alt="Los Telekirkies" width="200" height="70">
+            </a>
+
+            <!--botones-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                <!--lista de los botones-->
+                <ul class="navbar-nav">
+
+    <li class="nav-item">
+        <a class="nav-link" href="./index.html">
+            Inicio
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="./ejercicios-menu.html">
+            Ejercicios
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="./index.html#calculadoras">
+            Calculadora
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="./errores.html">
+            Errores
+        </a>
+    </li>
+
+</ul>
+            </div>
+        </div>
+
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/share/19FYYNyHim/" class="red-social facebook" target="_blank">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/numerica.exe?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                class="red-social instagram" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" class="red-social youtube" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+
+    <!--Inica los ejercicios, NOTA: Poner separados simbolos, parentesis, etc. Para que se vea visualmente mejor en la pagina porfas-->
+
+    <div class="container-fluid">
+
+
+
+<!-- EJERCICIOS DE Regla de Simpson -->
+
+<section class="ejercicios-abiertos">
+
+    <div class="section-title">
+        <span>MÉTODOS NUMÉRICOS</span>
+        <h2>Ejercicios de Regla de Simpson (3 series)</h2>
+        <p>
+            Aplicación del método de regla de Simpson.
+        </p>
+    </div>
+    <div>
+        <h3>Serie 1:</h3>
+    </div>
+    <!-- EJERCICIO 1 -->
+<article class="ejercicio-abierto">
+    <h3>Ejercicio 1</h3>
+
+    <p>
+        Calcula la integral definida mediante la regla compuesta de Simpson 1/3 con n = 4 subintervalos (h = 0.500000).
+    </p>
+
+    <div class="funcion-ejercicio">
+        I = ∫₀² (x³ + 2x + 1) dx
+    </div>
+
+    <p><strong>Subintervalos:</strong> n = 4</p>
+    <p><strong>Tamaño de paso:</strong> h = 0.500000</p>
+
+    <h4>Fórmula y valor exacto</h4>
+    <p>I_aprox = (0.5 / 3) [60.000000] = 10.000000 | I_exacto = 10.000000 | Error absoluto = 0.000000 | Error rel. porcentual = 0.000000%</p>
+
+    <h4>Tabla de evaluación</h4>
+    <div class="tabla-ejercicio">
+        <table>
+            <thead>
+                <tr>
+                    <th>i</th>
+                    <th>xᵢ</th>
+                    <th>f(xᵢ)</th>
+                    <th>Coeficiente cᵢ</th>
+                    <th>cᵢ · f(xᵢ)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>0</td><td>0.0</td><td>1.000000</td><td>1</td><td>1.000000</td></tr>
+                <tr><td>1</td><td>0.5</td><td>2.125000</td><td>4</td><td>8.500000</td></tr>
+                <tr><td>2</td><td>1.0</td><td>4.000000</td><td>2</td><td>8.000000</td></tr>
+                <tr><td>3</td><td>1.5</td><td>7.375000</td><td>4</td><td>29.500000</td></tr>
+                <tr><td>4</td><td>2.0</td><td>13.000000</td><td>1</td><td>13.000000</td></tr>
+                <tr><td>Suma</td><td>-</td><td>-</td><td>-</td><td>60.000000</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="resultado-ejercicio">
+        <strong>Conclusión:</strong>
+        La aproximación (10.000000) coincide exactamente con el valor analítico (10.000000), con error nulo, porque Simpson 1/3 integra sin error polinomios de grado menor o igual a 3.
+    </div>
+</article>
+
+<!-- EJERCICIO 2 -->
+<article class="ejercicio-abierto">
+    <h3>Ejercicio 2</h3>
+
+    <p>
+        Calcula la integral definida mediante la regla compuesta de Simpson 1/3 con n = 4 subintervalos (h = 0.250000).
+    </p>
+
+    <div class="funcion-ejercicio">
+        I = ∫₀¹ eˣ dx
+    </div>
+
+    <p><strong>Subintervalos:</strong> n = 4</p>
+    <p><strong>Tamaño de paso:</strong> h = 0.250000</p>
+
+    <h4>Fórmula y error absoluto</h4>
+    <p>I_aprox ≈ 1.718319 | I_exacto ≈ 1.718282 | Error absoluto ≈ 0.000037 | Error rel. porcentual ≈ 0.002155%</p>
+
+    <h4>Tabla de evaluación</h4>
+    <div class="tabla-ejercicio">
+        <table>
+            <thead>
+                <tr>
+                    <th>i</th>
+                    <th>xᵢ</th>
+                    <th>f(xᵢ) = eˣⁱ</th>
+                    <th>Coeficiente cᵢ</th>
+                    <th>cᵢ · f(xᵢ)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>0</td><td>0.00</td><td>1.000000</td><td>1</td><td>1.000000</td></tr>
+                <tr><td>1</td><td>0.25</td><td>1.284025</td><td>4</td><td>5.136102</td></tr>
+                <tr><td>2</td><td>0.50</td><td>1.648721</td><td>2</td><td>3.297443</td></tr>
+                <tr><td>3</td><td>0.75</td><td>2.117000</td><td>4</td><td>8.468000</td></tr>
+                <tr><td>4</td><td>1.00</td><td>2.718282</td><td>1</td><td>2.718282</td></tr>
+                <tr><td>Suma</td><td>-</td><td>-</td><td>-</td><td>20.619826</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="resultado-ejercicio">
+        <strong>Conclusión:</strong>
+        La aproximación obtenida es I ≈ 1.718319 frente al valor exacto ≈ 1.718282, con un error absoluto de aproximadamente 0.000037.
+    </div>
+</article>
+
+<!-- EJERCICIO 3 -->
+<article class="ejercicio-abierto">
+    <h3>Ejercicio 3</h3>
+
+    <p>
+        Calcula la integral definida mediante la regla compuesta de Simpson 1/3 con n = 6 subintervalos (h = 0.166667).
+    </p>
+
+    <div class="funcion-ejercicio">
+        I = ∫₀¹ [1 / (1 + x²)] dx
+    </div>
+
+    <p><strong>Subintervalos:</strong> n = 6</p>
+    <p><strong>Tamaño de paso:</strong> h = 1/6 ≈ 0.166667</p>
+
+    <h4>Resultado analítico y error</h4>
+    <p>I_aprox ≈ 0.785398 | I_exacto ≈ 0.785398 | Error absoluto ≈ 0.0000002 | Error rel. porcentual ≈ 0.000029%</p>
+
+    <h4>Tabla de evaluación</h4>
+    <div class="tabla-ejercicio">
+        <table>
+            <thead>
+                <tr>
+                    <th>i</th>
+                    <th>xᵢ</th>
+                    <th>f(xᵢ) = 1/(1 + xᵢ²)</th>
+                    <th>Coeficiente cᵢ</th>
+                    <th>cᵢ · f(xᵢ)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>0</td><td>0</td><td>1.000000</td><td>1</td><td>1.000000</td></tr>
+                <tr><td>1</td><td>1/6</td><td>0.972973</td><td>4</td><td>3.891892</td></tr>
+                <tr><td>2</td><td>1/3</td><td>0.900000</td><td>2</td><td>1.800000</td></tr>
+                <tr><td>3</td><td>1/2</td><td>0.800000</td><td>4</td><td>3.200000</td></tr>
+                <tr><td>4</td><td>2/3</td><td>0.692308</td><td>2</td><td>1.384615</td></tr>
+                <tr><td>5</td><td>5/6</td><td>0.590164</td><td>4</td><td>2.360656</td></tr>
+                <tr><td>6</td><td>1</td><td>0.500000</td><td>1</td><td>0.500000</td></tr>
+                <tr><td>Suma</td><td>-</td><td>-</td><td>-</td><td>14.137163</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="resultado-ejercicio">
+        <strong>Conclusión:</strong>
+        La aproximación con n = 6 es I ≈ 0.785398, coincidiendo con el valor analítico hasta seis decimales con un error relativo porcentual de aproximadamente 0.000029%.
+    </div>
+</article>
+
+<!-- EJERCICIO 4 -->
+<article class="ejercicio-abierto">
+    <h3>Ejercicio 4</h3>
+
+    <p>
+        Calcula la integral definida mediante la regla compuesta de Simpson 1/3 con n = 8 subintervalos (h = 0.125000, en radianes).
+    </p>
+
+    <div class="funcion-ejercicio">
+        I = ∫₀¹ sen(x²) dx
+    </div>
+
+    <p><strong>Subintervalos:</strong> n = 8</p>
+    <p><strong>Tamaño de paso:</strong> h = 0.125000</p>
+
+    <h4>Utilidad de la integración numérica</h4>
+    <p>sen(x²) no posee antiderivada elemental cerrada, por lo que la integración numérica permite obtener aproximaciones precisas a partir de evaluaciones puntuales.</p>
+
+    <h4>Tabla de evaluación</h4>
+    <div class="tabla-ejercicio">
+        <table>
+            <thead>
+                <tr>
+                    <th>i</th>
+                    <th>xᵢ</th>
+                    <th>xᵢ² (rad)</th>
+                    <th>f(xᵢ) = sen(xᵢ²)</th>
+                    <th>Coeficiente cᵢ</th>
+                    <th>cᵢ · f(xᵢ)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>0</td><td>0.000</td><td>0.000000</td><td>0.000000</td><td>1</td><td>0.000000</td></tr>
+                <tr><td>1</td><td>0.125</td><td>0.015625</td><td>0.015624</td><td>4</td><td>0.062496</td></tr>
+                <tr><td>2</td><td>0.250</td><td>0.062500</td><td>0.062459</td><td>2</td><td>0.124918</td></tr>
+                <tr><td>3</td><td>0.375</td><td>0.140625</td><td>0.140162</td><td>4</td><td>0.560646</td></tr>
+                <tr><td>4</td><td>0.500</td><td>0.250000</td><td>0.247404</td><td>2</td><td>0.494808</td></tr>
+                <tr><td>5</td><td>0.625</td><td>0.390625</td><td>0.380758</td><td>4</td><td>1.523034</td></tr>
+                <tr><td>6</td><td>0.750</td><td>0.562500</td><td>0.533027</td><td>2</td><td>1.066053</td></tr>
+                <tr><td>7</td><td>0.875</td><td>0.765625</td><td>0.692978</td><td>4</td><td>2.771912</td></tr>
+                <tr><td>8</td><td>1.000</td><td>1.000000</td><td>0.841471</td><td>1</td><td>0.841471</td></tr>
+                <tr><td>Suma</td><td>-</td><td>-</td><td>-</td><td>-</td><td>7.444818</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="resultado-ejercicio">
+        <strong>Conclusión:</strong>
+        La aproximación obtenida con n = 8 es I ≈ 0.310201 para una función sin primitiva elemental cerrada.
+    </div>
+</article>
+
+<!-- EJERCICIO 5 -->
+<article class="ejercicio-abierto">
+    <h3>Ejercicio 5</h3>
+
+    <p>
+        Calcula la integral definida mediante la regla compuesta de Simpson 1/3 con n = 10 subintervalos (h = 0.200000) y compárala con el valor exacto.
+    </p>
+
+    <div class="funcion-ejercicio">
+        I = ∫₀² ln(1 + x) dx
+    </div>
+
+    <p><strong>Subintervalos:</strong> n = 10</p>
+    <p><strong>Tamaño de paso:</strong> h = 0.200000</p>
+
+    <h4>Valor exacto y errores</h4>
+    <p>I_aprox ≈ 1.295819 | I_exacto ≈ 1.295837 | Error absoluto ≈ 0.000018 | Error rel. porcentual ≈ 0.001365%</p>
+
+    <h4>Tabla de evaluación</h4>
+    <div class="tabla-ejercicio">
+        <table>
+            <thead>
+                <tr>
+                    <th>i</th>
+                    <th>xᵢ</th>
+                    <th>1 + xᵢ</th>
+                    <th>f(xᵢ) = ln(1 + xᵢ)</th>
+                    <th>Coeficiente cᵢ</th>
+                    <th>cᵢ · f(xᵢ)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>0</td><td>0.0</td><td>1.0</td><td>0.000000</td><td>1</td><td>0.000000</td></tr>
+                <tr><td>1</td><td>0.2</td><td>1.2</td><td>0.182322</td><td>4</td><td>0.729266</td></tr>
+                <tr><td>2</td><td>0.4</td><td>1.4</td><td>0.336472</td><td>2</td><td>0.672944</td></tr>
+                <tr><td>3</td><td>0.6</td><td>1.6</td><td>0.470004</td><td>4</td><td>1.880015</td></tr>
+                <tr><td>4</td><td>0.8</td><td>1.8</td><td>0.587787</td><td>2</td><td>1.175573</td></tr>
+                <tr><td>5</td><td>1.0</td><td>2.0</td><td>0.693147</td><td>4</td><td>2.772589</td></tr>
+                <tr><td>6</td><td>1.2</td><td>2.2</td><td>0.788457</td><td>2</td><td>1.576915</td></tr>
+                <tr><td>7</td><td>1.4</td><td>2.4</td><td>0.875469</td><td>4</td><td>3.501875</td></tr>
+                <tr><td>8</td><td>1.6</td><td>2.6</td><td>0.955511</td><td>2</td><td>1.911023</td></tr>
+                <tr><td>9</td><td>1.8</td><td>2.8</td><td>1.029619</td><td>4</td><td>4.118477</td></tr>
+                <tr><td>10</td><td>2.0</td><td>3.0</td><td>1.098612</td><td>1</td><td>1.098612</td></tr>
+                <tr><td>Suma</td><td>-</td><td>-</td><td>-</td><td>-</td><td>19.437288</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="resultado-ejercicio">
+        <strong>Conclusión:</strong>
+        La aproximación es I ≈ 1.295819 frente al valor exacto ≈ 1.295837; al aumentar n (reducir h), el error disminuye rápidamente como O(h⁴) o O(n⁻⁴).
+    </div>
+</article>
+    <div>
+        <h3>Serie 2:</h3>
+    </div>
+    <!-- EJERCICIO 1 -->
+<article class="ejercicio-abierto">
+    <h3>Ejercicio 1</h3>
+
+    <p>
+        Calcula la siguiente integral definida mediante la regla compuesta de Simpson 1/3, utilizando n = 4 subintervalos.
+    </p>
+
+    <div class="funcion-ejercicio">
+        I = ∫₀² (x⁴ + 3x² + 2) dx
+    </div>
+
+    <p><strong>Subintervalos:</strong> n = 4</p>
+    <p><strong>Tamaño de paso:</strong> h = 0.5</p>
+
+    <h4>Fórmula y valor exacto</h4>
+    <p>I_exacto = [x⁵/5 + x³ + 2x]₀² = 18.4</p>
+
+    <h4>Tabla de evaluación</h4>
+    <div class="tabla-ejercicio">
+        <table>
+            <thead>
+                <tr>
+                    <th>i</th>
+                    <th>xᵢ</th>
+                    <th>f(xᵢ)</th>
+                    <th>Peso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>0.0</td>
+                    <td>2.0000</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0.5</td>
+                    <td>2.8125</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>1.0</td>
+                    <td>6.0000</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>1.5</td>
+                    <td>13.8125</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>2.0</td>
+                    <td>30.0000</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="resultado-ejercicio">
+        <strong>Conclusión:</strong>
+        La aproximación obtenida es I ≈ 18.4167, con un valor exacto de 18.4, un error absoluto de 0.0167 y un error relativo porcentual de 0.0906%.
+    </div>
+</article>
+
+<!-- EJERCICIO 2 -->
+<article class="ejercicio-abierto">
+    <h3>Ejercicio 2</h3>
+
+    <p>
+        Calcula la siguiente integral mediante la regla compuesta de Simpson 1/3, utilizando n = 6 subintervalos (en radianes).
+    </p>
+
+    <div class="funcion-ejercicio">
+        I = ∫₀^(π/2) e⁻ˣ cos(x) dx
+    </div>
+
+    <p><strong>Subintervalos:</strong> n = 6</p>
+    <p><strong>Tamaño de paso:</strong> h = π/12 ≈ 0.261799</p>
+
+    <h4>Fórmula y valor exacto</h4>
+    <p>I_exacto = (e^(-π/2) + 1) / 2 ≈ 0.603940</p>
+
+    <h4>Tabla de evaluación</h4>
+    <div class="tabla-ejercicio">
+        <table>
+            <thead>
+                <tr>
+                    <th>i</th>
+                    <th>xᵢ</th>
+                    <th>f(xᵢ)</th>
+                    <th>Peso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1.000000</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>π/12</td>
+                    <td>0.743484</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>π/6</td>
+                    <td>0.513039</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>π/4</td>
+                    <td>0.322397</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>π/3</td>
+                    <td>0.175469</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>5π/12</td>
+                    <td>0.069923</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>π/2</td>
+                    <td>0.000000</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="resultado-ejercicio">
+        <strong>Conclusión:</strong>
+        La aproximación obtenida es I ≈ 0.603904, con un valor exacto de 0.603940 y un error absoluto de 0.000036 (3.6 × 10⁻⁵).
+    </div>
+</article>
+
+<!-- EJERCICIO 3 -->
+<article class="ejercicio-abierto">
+    <h3>Ejercicio 3</h3>
+
+    <p>
+        Utiliza la regla compuesta de Simpson 1/3 para aproximar la integral con n = 8 y n = 16, comparando ambos resultados.
+    </p>
+
+    <div class="funcion-ejercicio">
+        I = ∫₁³ [ln(x) / (x² + 1)] dx
+    </div>
+
+    <p><strong>Subintervalos:</strong> n = 8 y n = 16</p>
+    <p><strong>Tamaños de paso:</strong> h₈ = 0.25 y h₁₆ = 0.125</p>
+
+    <h4>Aproximaciones obtenidas</h4>
+    <p>S₈ ≈ 0.232999 | S₁₆ ≈ 0.233024</p>
+
+    <h4>Tabla de evaluación (n = 8 y n = 16)</h4>
+    <div class="tabla-ejercicio">
+        <table>
+            <thead>
+                <tr>
+                    <th>i</th>
+                    <th>xᵢ (n=8)</th>
+                    <th>f(xᵢ) (n=8)</th>
+                    <th>xᵢ (n=16)</th>
+                    <th>f(xᵢ) (n=16)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>0</td><td>1.00</td><td>0.000000</td><td>1.000</td><td>0.000000</td></tr>
+                <tr><td>1</td><td>1.25</td><td>0.087075</td><td>1.125</td><td>0.051990</td></tr>
+                <tr><td>2</td><td>1.50</td><td>0.124759</td><td>1.250</td><td>0.087075</td></tr>
+                <tr><td>3</td><td>1.75</td><td>0.137691</td><td>1.375</td><td>0.110186</td></tr>
+                <tr><td>4</td><td>2.00</td><td>0.138629</td><td>1.500</td><td>0.124759</td></tr>
+                <tr><td>5</td><td>2.25</td><td>0.133804</td><td>1.625</td><td>0.133371</td></tr>
+                <tr><td>6</td><td>2.50</td><td>0.126385</td><td>1.750</td><td>0.137691</td></tr>
+                <tr><td>7</td><td>2.75</td><td>0.118125</td><td>1.875</td><td>0.139130</td></tr>
+                <tr><td>8</td><td>3.00</td><td>0.109861</td><td>2.000</td><td>0.138629</td></tr>
+                <tr><td>9</td><td>-</td><td>-</td><td>2.125</td><td>0.136729</td></tr>
+                <tr><td>10</td><td>-</td><td>-</td><td>2.250</td><td>0.133804</td></tr>
+                <tr><td>11</td><td>-</td><td>-</td><td>2.375</td><td>0.130221</td></tr>
+                <tr><td>12</td><td>-</td><td>-</td><td>2.500</td><td>0.126385</td></tr>
+                <tr><td>13</td><td>-</td><td>-</td><td>2.625</td><td>0.122334</td></tr>
+                <tr><td>14</td><td>-</td><td>-</td><td>2.750</td><td>0.118125</td></tr>
+                <tr><td>15</td><td>-</td><td>-</td><td>2.875</td><td>0.113983</td></tr>
+                <tr><td>16</td><td>-</td><td>-</td><td>3.000</td><td>0.109861</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="resultado-ejercicio">
+        <strong>Conclusión:</strong>
+        Ambos resultados coinciden hasta la cuarta cifra decimal (0.2330) y la diferencia absoluta |S₁₆ - S₈| es 0.000025 (2.5 × 10⁻⁵).
+    </div>
+</article>
+
+<!-- EJERCICIO 4 -->
+<article class="ejercicio-abierto">
+    <h3>Ejercicio 4</h3>
+
+    <p>
+        Determina la distancia recorrida por el vehículo autónomo durante los primeros 10 segundos mediante la regla compuesta de Simpson 1/3.
+    </p>
+
+    <div class="funcion-ejercicio">
+        d = ∫₀¹⁰ (5 + 2t²e⁻⁰·²ᵗ) dt
+    </div>
+
+    <p><strong>Subintervalos:</strong> n = 10 y n = 20</p>
+    <p><strong>Tamaños de paso:</strong> h₁₀ = 1.0 y h₂₀ = 0.5</p>
+
+    <h4>Significado físico</h4>
+    <p>La integral de la velocidad respecto al tiempo representa el desplazamiento total en metros.</p>
+
+    <h4>Tabla comparativa de mallas</h4>
+    <div class="tabla-ejercicio">
+        <table>
+            <thead>
+                <tr>
+                    <th>Malla</th>
+                    <th>n</th>
+                    <th>h</th>
+                    <th>Distancia d (m)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>10</td>
+                    <td>1.0</td>
+                    <td>124.1611</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>20</td>
+                    <td>0.5</td>
+                    <td>124.1627</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="resultado-ejercicio">
+        <strong>Conclusión:</strong>
+        La distancia recorrida durante los primeros 10 segundos es de aproximadamente 124.16 metros, con una diferencia mínima de 0.0016 m entre ambas aproximaciones.
+    </div>
+</article>
+
+<!-- EJERCICIO 5 -->
+<article class="ejercicio-abierto">
+    <h3>Ejercicio 5</h3>
+
+    <p>
+        Aplica la regla compuesta de Simpson 1/3 con n = 4, n = 8 y n = 16, estima el error por refinamiento de malla y analiza el orden de convergencia.
+    </p>
+
+    <div class="funcion-ejercicio">
+        I = ∫₀² e⁻ˣ² dx
+    </div>
+
+    <p><strong>Subintervalos:</strong> n = 4, n = 8, n = 16</p>
+    <p><strong>Fórmula de error:</strong> E ≈ |S₂ₙ - Sₙ| / 15</p>
+
+    <h4>Orden del error global</h4>
+    <p>El error global es O(h⁴) porque el error local O(h⁵) se acumula n/2 = (b - a)/(2h) veces.</p>
+
+    <h4>Tabla comparativa</h4>
+    <div class="tabla-ejercicio">
+        <table>
+            <thead>
+                <tr>
+                    <th>n</th>
+                    <th>h</th>
+                    <th>Sₙ</th>
+                    <th>Error estimado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>0.500</td>
+                    <td>0.8818124</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>0.250</td>
+                    <td>0.8820655</td>
+                    <td>1.687 × 10⁻⁵</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>0.125</td>
+                    <td>0.8820804</td>
+                    <td>9.933 × 10⁻⁷</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="resultado-ejercicio">
+        <strong>Conclusión:</strong>
+        Al duplicar n (reducir h a la mitad), el error disminuye aproximadamente por un factor de 16 (2⁴), confirmando que la regla compuesta de Simpson 1/3 tiene precisión de orden O(h⁴).
+    </div>
+</article>
+<div>
+        <h3>Serie 3:</h3>
+    </div>
+    <!-- EJERCICIO 1 -->
+<article class="ejercicio-abierto">
+    <h3>Ejercicio 1</h3>
+
+    <p>
+        Calcula la siguiente integral definida mediante la regla compuesta de Simpson 1/3 con n = 6 subintervalos.
+    </p>
+
+    <div class="funcion-ejercicio">
+        I = ∫₀³ (x⁴ - 2x² + 5) dx
+    </div>
+
+    <p><strong>Subintervalos:</strong> n = 6</p>
+    <p><strong>Tamaño de paso:</strong> h = (3 - 0) / 6 = 0.5</p>
+
+    <h4>Fórmula y valor exacto</h4>
+    <p>I_aprox = (0.5 / 3) [5 + 4(4.5625) + 2(4) + 4(5.5625) + 2(13) + 4(31.5625) + 68] = 45.625 | I_exacto = [x⁵/5 - 2x³/3 + 5x]₀³ = 45.6</p>
+
+    <h4>Tabla de evaluación</h4>
+    <div class="tabla-ejercicio">
+        <table>
+            <thead>
+                <tr>
+                    <th>j</th>
+                    <th>Nodos</th>
+                    <th>f(x)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>0.000</td>
+                    <td>5.0000</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0.5</td>
+                    <td>4.5625</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>4.0000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>1.5</td>
+                    <td>5.5625</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>13.000</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>2.5</td>
+                    <td>31.5625</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>3</td>
+                    <td>68.0000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="resultado-ejercicio">
+        <strong>Conclusión:</strong>
+        La aproximación obtenida es I = 45.625, con valor exacto de 45.6, error absoluto Ea = 0.025 y error relativo porcentual Er% = 0.0548%.
+    </div>
+</article>
+
+<!-- EJERCICIO 2 -->
+<article class="ejercicio-abierto">
+    <h3>Ejercicio 2</h3>
+
+    <p>
+        Calcula la siguiente integral mediante la regla compuesta de Simpson 1/3, utilizando n = 8 subintervalos y empleando radianes.
+    </p>
+
+    <div class="funcion-ejercicio">
+        I = ∫₀^π sen(x) e^(-x/2) dx
+    </div>
+
+    <p><strong>Subintervalos:</strong> n = 8</p>
+    <p><strong>Tamaño de paso:</strong> h = (π - 0) / 8 = 0.392699</p>
+
+    <h4>Fórmula y aproximación</h4>
+    <p>I ≈ (0.392699 / 3) [0 + 0 + 4(0.314461 + 0.512619 + 0.346137 + 0.096811) + 2(0.477461 + 0.485938 + 0.217693)] ≈ 0.966339974</p>
+
+    <h4>Tabla de evaluación</h4>
+    <div class="tabla-ejercicio">
+        <table>
+            <thead>
+                <tr>
+                    <th>i</th>
+                    <th>xᵢ</th>
+                    <th>f(xᵢ)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0.392699</td>
+                    <td>0.314461</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>0.785398</td>
+                    <td>0.477461</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>1.178097</td>
+                    <td>0.512619</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>1.570796</td>
+                    <td>0.485938</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>1.963495</td>
+                    <td>0.346137</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>2.356194</td>
+                    <td>0.217693</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>2.748894</td>
+                    <td>0.096811</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>3.141593</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="resultado-ejercicio">
+        <strong>Conclusión:</strong>
+        La aproximación obtenida con n = 8 subintervalos es I ≈ 0.966339974.
+    </div>
+</article>
+
+<!-- EJERCICIO 3 -->
+<article class="ejercicio-abierto">
+    <h3>Ejercicio 3</h3>
+
+    <p>
+        Calcula la integral definida mediante la regla compuesta de Simpson 1/3 utilizando n = 6 y n = 12 subintervalos.
+    </p>
+
+    <div class="funcion-ejercicio">
+        I = ∫₁⁴ [(x² + 1) / (x³ + 2)] dx
+    </div>
+
+    <p><strong>Subintervalos:</strong> n = 6 y n = 12</p>
+    <p><strong>Tamaños de paso:</strong> h₆ = (4 - 1) / 6 = 0.5 y h₁₂ = (4 - 1) / 12 = 0.25</p>
+
+    <h4>Valor exacto y diferencia absoluta</h4>
+    <p>Valor exacto: 1.3101 | Diferencia absoluta: |1.31009 - 1.309826| = 0.000271</p>
+
+    <h4>Tabla de evaluación (Para n = 6)</h4>
+    <div class="tabla-ejercicio">
+        <table>
+            <thead>
+                <tr>
+                    <th>j</th>
+                    <th>Nodos</th>
+                    <th>f(x)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>0</td><td>1</td><td>0.66666</td></tr>
+                <tr><td>1</td><td>1.5</td><td>0.604651</td></tr>
+                <tr><td>2</td><td>2</td><td>0.5</td></tr>
+                <tr><td>3</td><td>2.5</td><td>0.4113</td></tr>
+                <tr><td>4</td><td>3</td><td>0.3448</td></tr>
+                <tr><td>5</td><td>3.5</td><td>0.2952</td></tr>
+                <tr><td>6</td><td>4</td><td>0.2575</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h4>Tabla de evaluación (Para n = 12)</h4>
+    <div class="tabla-ejercicio">
+        <table>
+            <thead>
+                <tr>
+                    <th>j</th>
+                    <th>Nodos</th>
+                    <th>f(x)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>0</td><td>1</td><td>0.66666</td></tr>
+                <tr><td>1</td><td>1.25</td><td>0.6481</td></tr>
+                <tr><td>2</td><td>1.5</td><td>0.6046</td></tr>
+                <tr><td>3</td><td>1.75</td><td>0.5514</td></tr>
+                <tr><td>4</td><td>2</td><td>0.5</td></tr>
+                <tr><td>5</td><td>2.25</td><td>0.4526</td></tr>
+                <tr><td>6</td><td>2.50</td><td>0.4116</td></tr>
+                <tr><td>7</td><td>2.75</td><td>0.3755</td></tr>
+                <tr><td>8</td><td>3</td><td>0.3448</td></tr>
+                <tr><td>9</td><td>3.25</td><td>0.3183</td></tr>
+                <tr><td>10</td><td>3.5</td><td>0.2952</td></tr>
+                <tr><td>11</td><td>3.75</td><td>0.2750</td></tr>
+                <tr><td>12</td><td>4</td><td>0.2575</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h4>Tabla comparativa</h4>
+    <div class="tabla-ejercicio">
+        <table>
+            <thead>
+                <tr>
+                    <th>n</th>
+                    <th>h</th>
+                    <th>Valor aprox</th>
+                    <th>Ea</th>
+                    <th>Er</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>6</td>
+                    <td>0.5</td>
+                    <td>1.3098</td>
+                    <td>0.00028</td>
+                    <td>0.0221%</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>0.25</td>
+                    <td>1.310097</td>
+                    <td>0.000018</td>
+                    <td>0.0014%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="resultado-ejercicio">
+        <strong>Conclusión:</strong>
+        Al refinar la malla de n = 6 a n = 12, el valor aproximado pasa de 1.3098 a 1.310097 (cercano al valor exacto 1.3101), reduciendo el error absoluto a 0.000018 y el error relativo a 0.0014%.
+    </div>
+</article>
+
+<!-- EJERCICIO 4 -->
+<article class="ejercicio-abierto">
+    <h3>Ejercicio 4</h3>
+
+    <p>
+        Calcula la integral definida mediante la regla compuesta de Simpson 1/3 utilizando n = 12 subintervalos.
+    </p>
+
+    <div class="funcion-ejercicio">
+        I = ∫₀⁶ (120 + 30 sen(πt/6) + 5t²) dt
+    </div>
+
+    <p><strong>Subintervalos:</strong> n = 12</p>
+    <p><strong>Tamaño de paso:</strong> h = 6 / 12 = 0.5</p>
+
+    <h4>Fórmula de Simpson y valor exacto</h4>
+    <p>I_aprox = (0.5 / 3) [7167.5680] = 1199.5947 | I_exacto = (1080 + 180/π) - (-180/π) = 1080 + 360/π ≈ 1194.5916</p>
+
+    <h4>Tabla de evaluación</h4>
+    <div class="tabla-ejercicio">
+        <table>
+            <thead>
+                <tr>
+                    <th>i</th>
+                    <th>Nodo</th>
+                    <th>f(x)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>0</td><td>0.0</td><td>120.0000</td></tr>
+                <tr><td>1</td><td>0.5</td><td>129.0196</td></tr>
+                <tr><td>2</td><td>1.0</td><td>140.0000</td></tr>
+                <tr><td>3</td><td>1.5</td><td>152.4632</td></tr>
+                <tr><td>4</td><td>2.0</td><td>165.9808</td></tr>
+                <tr><td>5</td><td>2.5</td><td>180.2278</td></tr>
+                <tr><td>6</td><td>3.0</td><td>195.0000</td></tr>
+                <tr><td>7</td><td>3.5</td><td>210.2278</td></tr>
+                <tr><td>8</td><td>4.0</td><td>225.9808</td></tr>
+                <tr><td>9</td><td>4.5</td><td>242.4632</td></tr>
+                <tr><td>10</td><td>5.0</td><td>260.0000</td></tr>
+                <tr><td>11</td><td>5.5</td><td>279.0196</td></tr>
+                <tr><td>12</td><td>6.0</td><td>300.0000</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="resultado-ejercicio">
+        <strong>Conclusión:</strong>
+        La aproximación obtenida es I ≈ 1199.5947; al comparar con el valor analítico (1194.5916), se registra Ea = -3.1 × 10⁻³ y Ep% = -2.5950 × 10⁻⁴%.
+    </div>
+</article>
+
+<!-- EJERCICIO 5 -->
+<article class="ejercicio-abierto">
+    <h3>Ejercicio 5</h3>
+
+    <p>
+        Aplica la regla compuesta de Simpson 1/3 para n = 4, 8, 16 y 32 subintervalos y analiza los resultados.
+    </p>
+
+    <div class="funcion-ejercicio">
+        I = ∫₀² [e^(-x²) / (1 + x²)] dx
+    </div>
+
+    <p><strong>Subintervalos:</strong> n = 4, 8, 16, 32</p>
+    <p><strong>Tamaños de paso:</strong> h₄ = 0.5, h₈ = 0.25, h₁₆ = 0.125, h₃₂ = 0.0625</p>
+
+    <h4>Aproximaciones y valor de la integral</h4>
+    <p>S₄ = 0.66557119 | S₈ ≈ 0.66918007 | S₁₆ ≈ 0.669413792 | S₃₂ ≈ 0.669413548 | Integral ≈ 0.669413532</p>
+
+    <h4>Tabla de resultados</h4>
+    <div class="tabla-ejercicio">
+        <table>
+            <thead>
+                <tr>
+                    <th>n</th>
+                    <th>h</th>
+                    <th>Aproximación</th>
+                    <th>Diferencia</th>
+                    <th>Error Estimado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>0.5000</td>
+                    <td>0.66557119</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>0.2500</td>
+                    <td>0.66918007</td>
+                    <td>1.3911 × 10⁻³</td>
+                    <td>9.2741 × 10⁻⁵</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>0.1250</td>
+                    <td>0.669413792</td>
+                    <td>4.2150 × 10⁻⁵</td>
+                    <td>2.8100 × 10⁻⁶</td>
+                </tr>
+                <tr>
+                    <td>32</td>
+                    <td>0.0625</td>
+                    <td>0.669413548</td>
+                    <td>2.4400 × 10⁻⁶</td>
+                    <td>1.6227 × 10⁻⁷</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="resultado-ejercicio">
+        <strong>Conclusión:</strong>
+        La precisión mejora al reducir h porque cada parábola abarca un tramo más corto y se ajusta mejor a la curva.
+    </div>
+</article>
+</section>
+
+    <br>
+
+    <!--Aqui footer-->
+
+    <footer>
+        <div class="container container-1">
+            <div class="row row-1">
+                <div class="col">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a class="a-1" href="./index.html">Inicio</a></li>
+                        <li><a class="a-1" href="./ejercicios.html">Ejercicios</a></li>
+                        <li><a class="a-1" href="#">Redes Sociales</a></li>
+                        <li><a class="a-1" href="./datosCuriosos.html">Datos Curiosos</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Contacto</h3>
+                    <p>Dirección: UNAM FES ARAGÓN.</p>
+                    <p>Carrera: Ingenieria en Computación</p>
+                    <p>Correo electronico: telekirkies@gmail.com</p>
+                </div>
+                <div class="col">
+                    <h3>Participantes del equipo</h3>
+                    <p>Aguilera Villavicencio Hayat</p>
+                    <p>Cervantes Márquez Joan Antonio</p>
+                    <p>Casarrubias Peñaloza Valeria Guadalupe</p>
+                    <p>Espinosa Rojas Jonatan Mateo</p>
+                    <p>Garduño Muñoa Allison Daniela</p>
+                    <p>Luque Mendoza David</p>
+                    <p>Zamora Tierrablanca Saúl Isai</p>
+                </div>
+
+                <!--Redes sociales-->
+
+                <div class="redes-sociales">
+                    <a href="https://www.facebook.com/share/19FYYNyHim/" class="red-social facebook" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/numerica.exe?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                        class="red-social instagram" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="red-social youtube" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--js para la funcion de la pagina-->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
