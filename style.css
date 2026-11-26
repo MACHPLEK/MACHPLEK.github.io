@@ -1,3 +1,4 @@
+
 /*base */
 
 * {
@@ -397,7 +398,7 @@ nav {
 }
 
 
-/*   PAGINA ERRORES.HTML    */
+/* PAGINA ERRORES.HTML */
 
 .errores-section {
     padding: 70px 8%;
@@ -487,7 +488,6 @@ nav {
 }
 
 
-
 .card-2,
 .card-3 {
     display: inline-block;
@@ -510,7 +510,6 @@ nav {
     transform: translateY(-2px);
     background-color: #e8f6ff;
 }
-
 
 
 .neon-cyan,
@@ -542,7 +541,7 @@ nav {
 }
 
 
-/*  Calculadora bisección  */
+/* Calculadora bisección */
 
 .calculadora {
     width: 90%;
@@ -988,7 +987,6 @@ ul li {
 }
 
 
-
 /* para bisseccion abierta */
 
 .ejercicios-abiertos {
@@ -1060,7 +1058,6 @@ ul li {
 }
 
 
-
 /* tablas de biseccion abierta */
 
 .tabla-ejercicio {
@@ -1106,6 +1103,7 @@ ul li {
 
 
 /* esto es para la calculadora de newton */
+
 #tablaNewton {
     width: 100%;
     border-collapse: collapse;
@@ -1177,7 +1175,7 @@ ul li {
         grid-template-columns: 1fr;
     }
 
-    .proposito-card {
+    .proposisto-card {
         padding: 25px;
     }
 }
@@ -1186,5 +1184,53 @@ ul li {
     .proposito-section {
         width: 94%;
         margin-bottom: 55px;
+    }
+}
+
+/* esto es para la calculadora de Taylor */
+
+#tablaTaylor {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #ffffff;
+}
+
+#tablaTaylor th,
+#tablaTaylor td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+#tablaTaylor th {
+    background: #4fa9d8;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#tablaTaylor td {
+    color: #111111;
+}
+
+#tablaTaylor tbody tr:nth-child(even) {
+    background: #f5fbff;
+}
+
+#tablaTaylor tbody tr:hover {
+    background: #eef8fd;
+}
+
+
+/* tabla de Taylor en celulares */
+
+@media (max-width: 480px) {
+
+    #tablaTaylor th,
+    #tablaTaylor td {
+        padding: 8px;
+        font-size: 13px;
     }
 }
