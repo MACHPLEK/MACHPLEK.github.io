@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora - Método de Simpson</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- Menu de navegacion -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #000000;">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="./index.html">Métodos Numéricos</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./index.html">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./ejercicios-menu.html">Ejercicios</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./errores.html">Errores</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Calculadora de Simpson -->
+    <section class="calculadora">
+
+        <h2>Método de Simpson</h2>
+
+        <p>
+            Calcula una aproximación de integrales definidas utilizando
+            los métodos de Simpson 1/3 y Simpson 3/8.
+        </p>
+
+        <!-- Funcion -->
+        <div class="campo funcion-campo">
+            <label for="funcion">Función f(x):</label>
+
+            <input type="text" id="funcion" placeholder="Ejemplo: x^2 + 3*x">
+
+            <div class="botones-funciones">
+                <button type="button" onclick="agregarTexto('funcion', 'sin(')">sin</button>
+                <button type="button" onclick="agregarTexto('funcion', 'cos(')">cos</button>
+                <button type="button" onclick="agregarTexto('funcion', 'tan(')">tan</button>
+                <button type="button" onclick="agregarTexto('funcion', 'e^(')">e^x</button>
+                <button type="button" onclick="agregarTexto('funcion', 'sqrt(')">√</button>
+                <button type="button" onclick="agregarTexto('funcion', 'log(')">log</button>
+                <button type="button" onclick="agregarTexto('funcion', 'ln(')">ln</button>
+                <button type="button" onclick="agregarTexto('funcion', '^2')">x²</button>
+            </div>
+        </div>
+
+        <!-- Seleccion del metodo -->
+        <div class="formulario">
+
+            <div class="campo">
+                <label for="metodo">Método:</label>
+
+                <select id="metodo">
+                    <option value="13">Simpson 1/3</option>
+                    <option value="38">Simpson 3/8</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="limiteA">Límite inferior (a):</label>
+                <input type="number" id="limiteA" step="any" placeholder="Ejemplo: 0">
+            </div>
+
+            <div class="campo">
+                <label for="limiteB">Límite superior (b):</label>
+                <input type="number" id="limiteB" step="any" placeholder="Ejemplo: 2">
+            </div>
+
+            <div class="campo">
+                <label for="subintervalos">Número de subintervalos (n):</label>
+                <input type="number" id="subintervalos" min="1" step="1" placeholder="Ejemplo: 6">
+            </div>
+
+            <button type="button" class="btn-calcular" onclick="calcularSimpson()">
+                CALCULAR
+            </button>
+
+        </div>
+
+        <!-- Mensajes -->
+        <div id="mensaje"></div>
+
+        <!-- Resultados -->
+        <div id="resultado" style="display: none;">
+
+            <h3>Resultados</h3>
+
+            <p>
+                Método utilizado:
+                <span id="metodoUsado"></span>
+            </p>
+
+            <p>
+                Tamaño del intervalo (h):
+                <span id="valorH"></span>
+            </p>
+
+            <p>
+                Resultado de la integral:
+                <strong id="resultadoIntegral"></strong>
+            </p>
+
+            <p id="formulaSimpson"></p>
+
+        </div>
+
+        <!-- Tabla de resultados -->
+        <div class="tabla-container">
+
+            <table id="tablaSimpson">
+
+                <thead>
+                    <tr>
+                        <th>i</th>
+                        <th>xᵢ</th>
+                        <th>f(xᵢ)</th>
+                        <th>Coeficiente</th>
+                        <th>Producto</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaResultados">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <!-- Pie de pagina -->
+    <footer>
+        <p>© 2026 Métodos Numéricos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@14/lib/browser/math.js"></script>
+    <script src="scriptSimpson.js"></script>
+
+</body>
+</html>
+

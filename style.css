@@ -1234,3 +1234,30 @@ ul li {
         font-size: 13px;
     }
 }
+
+/* Estilo del selector de método de Simpson */
+#metodo {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #8ecdf5;
+    border-radius: 12px;
+    background-color: #f0f8ff;
+    color: #2879b9;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Cuando se selecciona la barra */
+#metodo:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+/* Opciones del menú */
+#metodo option {
+    background-color: #ffffff;
+    color: #2879b9;
+}
